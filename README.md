@@ -1,4 +1,6 @@
 # thysys
 for CS thesis 2
 
-I mainly use the master branch when I'm updating new things from my local repo, then I push it to main branch
+
+I use master branch for changes directly made in my local repository then I push to main branch whatever I have in total for the day
+
