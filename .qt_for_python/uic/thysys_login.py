@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'thysys_login.ui'
+# Form implementation generated from reading ui file 'c:\Users\acer\Desktop\thysys\thysys_login.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.4
 #
@@ -19,7 +19,7 @@ class Ui_Form(object):
         self.icon = QtWidgets.QLabel(Form)
         self.icon.setGeometry(QtCore.QRect(260, 30, 161, 141))
         self.icon.setText("")
-        self.icon.setPixmap(QtGui.QPixmap("thyroid.png"))
+        self.icon.setPixmap(QtGui.QPixmap("c:\\Users\\acer\\Desktop\\thysys\\thyroid.png"))
         self.icon.setScaledContents(True)
         self.icon.setObjectName("icon")
         self.thysysName = QtWidgets.QLabel(Form)
@@ -61,12 +61,12 @@ class Ui_Form(object):
         self.label.setGeometry(QtCore.QRect(190, 440, 161, 16))
         self.label.setStyleSheet("color: rgb(156, 156, 156);")
         self.label.setObjectName("label")
-        self.pushButton = QtWidgets.QPushButton(Form)
-        self.pushButton.setGeometry(QtCore.QRect(360, 430, 93, 28))
-        self.pushButton.setStyleSheet("border-color: rgb(255, 255, 255);\n"
+        self.createAcc = QtWidgets.QPushButton(Form)
+        self.createAcc.setGeometry(QtCore.QRect(360, 430, 93, 28))
+        self.createAcc.setStyleSheet("border-color: rgb(255, 255, 255);\n"
 "background-color: rgb(255, 255, 255);\n"
 "border-radius:15px;")
-        self.pushButton.setObjectName("pushButton")
+        self.createAcc.setObjectName("createAcc")
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -79,14 +79,4 @@ class Ui_Form(object):
         self.passwordLabel.setText(_translate("Form", "Password"))
         self.Login.setText(_translate("Form", "Log In"))
         self.label.setText(_translate("Form", "Don\'t have an account yet?"))
-        self.pushButton.setText(_translate("Form", "Sign Up Now"))
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    Form = QtWidgets.QWidget()
-    ui = Ui_Form()
-    ui.setupUi(Form)
-    Form.show()
-    sys.exit(app.exec_())
+        self.createAcc.setText(_translate("Form", "Sign Up Now"))
