@@ -123,6 +123,24 @@ border-radius: 15px;</string>
     <string>Answer 3</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="Back">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>41</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(170, 170, 255);
+border-radius:20px;</string>
+   </property>
+   <property name="text">
+    <string>Back</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>
