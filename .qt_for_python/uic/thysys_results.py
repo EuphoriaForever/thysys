@@ -38,6 +38,10 @@ class Ui_Form(object):
 "font: 75 10pt \"Arial\";\n"
 "border-radius: 15px;")
         self.Back.setObjectName("Back")
+        self.label_3 = QtWidgets.QLabel(Form)
+        self.label_3.setGeometry(QtCore.QRect(10, 470, 291, 16))
+        self.label_3.setStyleSheet("color: rgb(188, 188, 188);")
+        self.label_3.setObjectName("label_3")
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -48,3 +52,4 @@ class Ui_Form(object):
         self.Question.setText(_translate("Form", "This is your results"))
         self.thysysName.setText(_translate("Form", "THY-SYS"))
         self.Back.setText(_translate("Form", "Back to Home"))
+        self.label_3.setText(_translate("Form", "© Icon from flaticon.com"))
