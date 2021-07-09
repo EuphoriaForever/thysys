@@ -58,6 +58,10 @@ class Ui_Form(object):
 "background-color: rgb(170, 170, 255);\n"
 "border-radius:20px;")
         self.Back.setObjectName("Back")
+        self.label_3 = QtWidgets.QLabel(Form)
+        self.label_3.setGeometry(QtCore.QRect(10, 460, 291, 16))
+        self.label_3.setStyleSheet("color: rgb(188, 188, 188);")
+        self.label_3.setObjectName("label_3")
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -71,3 +75,4 @@ class Ui_Form(object):
         self.Answer1.setText(_translate("Form", "Answer 1"))
         self.Answer3.setText(_translate("Form", "Answer 3"))
         self.Back.setText(_translate("Form", "Back"))
+        self.label_3.setText(_translate("Form", "© Icon from flaticon.com"))

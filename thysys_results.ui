@@ -85,6 +85,22 @@ border-radius: 15px;</string>
     <string>Back to Home</string>
    </property>
   </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>470</y>
+     <width>291</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(188, 188, 188);</string>
+   </property>
+   <property name="text">
+    <string>© Icon from flaticon.com</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>
