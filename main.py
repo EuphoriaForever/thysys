@@ -68,11 +68,47 @@ class Homepage(QDialog):
         super(Homepage,self).__init__()
         loadUi("thysys_homepage.ui",self)
         self.Logout.clicked.connect(self.gotoLanding)
+        self.TakeAssessment.clicked.connect(self.gotoAssessment)
+        self.MyResults.clicked.connect(self.gotoResult)
 
     def gotoLanding(self):
         landingVar = Landing()
         widget.addWidget(landingVar)
         widget.setCurrentIndex(widget.currentIndex()+1)
+    
+    def gotoAssessment(self):
+        assessmentVar = Assessment()
+        widget.addWidget(assessmentVar)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    
+    def gotoResult(self):
+        resultVar = Result()
+        widget.addWidget(resultVar)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
+class Assessment(QDialog):
+    def __init__(self):
+        super(Assessment,self).__init__()
+        loadUi("thysys_assessmentPage.ui",self)
+        self.Back.clicked.connect(self.gotoHome)
+    
+    def gotoHome(self):
+        homepageVar = Homepage()
+        widget.addWidget(homepageVar)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+
+
+class Result(QDialog):
+    def __init__(self):
+        super(Result,self).__init__()
+        loadUi("thysys_results.ui",self)
+        self.Back.clicked.connect(self.gotoHome)
+        
+    def gotoHome(self):
+        homepageVar = Homepage()
+        widget.addWidget(homepageVar)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+    
 
 app=QApplication(sys.argv)
 mainwindow=Landing()

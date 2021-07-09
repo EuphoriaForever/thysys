@@ -66,7 +66,7 @@ font: 87 14pt &quot;Arial Black&quot;;
     <string>THY-SYS</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="Home">
+  <widget class="QPushButton" name="Back">
    <property name="geometry">
     <rect>
      <x>270</x>
