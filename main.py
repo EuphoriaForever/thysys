@@ -1,12 +1,13 @@
 import sys
-from PyQt5 import QtWidgets
+
+from PyQt5 import QtWidgets, uic
 from PyQt5.QtWidgets import QDialog, QApplication
-from PyQt5.uic import loadUi
+
 
 class Landing(QDialog):
     def __init__(self):
-        super(Landing,self).__init__()
-        loadUi("thysys_landing_page.ui",self)
+        super(Landing, self).__init__()
+        uic.loadUi("thysys_landing_page.ui", self)
         self.Login.clicked.connect(self.gotologin)
         self.Signup.clicked.connect(self.gotosignup)
 
@@ -25,7 +26,7 @@ class Landing(QDialog):
 class Login(QDialog):
     def __init__(self):
         super(Login,self).__init__()
-        loadUi("thysys_login.ui",self)
+        uic.loadUi("thysys_login.ui", self)
         self.Login.clicked.connect(self.loginfunction)
         self.password.setEchoMode(QtWidgets.QLineEdit.Password)
         self.createAcc.clicked.connect(self.gotosignup)
@@ -33,7 +34,7 @@ class Login(QDialog):
     def loginfunction(self):
         username = self.username.text()
         password = self.password.text()
-        print("Successfully logged in with username ",username,"and password ", password)
+        print("Successfully logged in with username ", username, "and password ", password)
         homepageVar = Homepage()
         widget.addWidget(homepageVar)
         widget.setCurrentIndex(widget.currentIndex()+1)
@@ -46,7 +47,7 @@ class Login(QDialog):
 class Signup(QDialog):
     def __init__(self):
         super(Signup,self).__init__()
-        loadUi("thysys_signup.ui",self)
+        uic.loadUi("thysys_signup.ui", self)
         self.Signup.clicked.connect(self.signupfunction)
         self.loginAcc.clicked.connect(self.gotologin)
         self.password.setEchoMode(QtWidgets.QLineEdit.Password)
@@ -56,7 +57,7 @@ class Signup(QDialog):
         username = self.username.text()
         if self.password.text()==self.confirm_password.text():
             password = self.password.text()
-            print("successfully created username",username,"with password",password)
+            print("successfully created username", username, "with password", password)
 
     def gotologin(self):
         loginVar = Login()
@@ -65,8 +66,8 @@ class Signup(QDialog):
 
 class Homepage(QDialog):
     def __init__(self):
-        super(Homepage,self).__init__()
-        loadUi("thysys_homepage.ui",self)
+        super(Homepage, self).__init__()
+        uic.loadUi("thysys_homepage.ui", self)
         self.Logout.clicked.connect(self.gotoLanding)
         self.TakeAssessment.clicked.connect(self.gotoAssessment)
         self.MyResults.clicked.connect(self.gotoResult)
@@ -88,8 +89,8 @@ class Homepage(QDialog):
 
 class Assessment(QDialog):
     def __init__(self):
-        super(Assessment,self).__init__()
-        loadUi("thysys_assessmentPage.ui",self)
+        super(Assessment, self).__init__()
+        uic.loadUi("thysys_assessmentPage.ui", self)
         self.Back.clicked.connect(self.gotoHome)
     
     def gotoHome(self):
@@ -100,8 +101,8 @@ class Assessment(QDialog):
 
 class Result(QDialog):
     def __init__(self):
-        super(Result,self).__init__()
-        loadUi("thysys_results.ui",self)
+        super(Result, self).__init__()
+        uic.loadUi("thysys_results.ui", self)
         self.Back.clicked.connect(self.gotoHome)
         
     def gotoHome(self):
@@ -110,9 +111,9 @@ class Result(QDialog):
         widget.setCurrentIndex(widget.currentIndex()+1)
     
 
-app=QApplication(sys.argv)
-mainwindow=Landing()
-widget=QtWidgets.QStackedWidget()
+app = QApplication(sys.argv)
+mainwindow = Landing()
+widget = QtWidgets.QStackedWidget()
 widget.addWidget(mainwindow)
 widget.setFixedWidth(663)
 widget.setFixedHeight(486)
