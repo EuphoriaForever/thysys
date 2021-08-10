@@ -1,5 +1,6 @@
 import sys
 import sqlite3
+from chefboost import Chefboost as cb
 from PyQt5 import QtWidgets, uic
 from PyQt5.QtWidgets import QDialog, QApplication
 
@@ -77,7 +78,7 @@ class Signup(QDialog):
             c = conn.cursor()
             # check if there exists an account with the same username we want
             c.execute('SELECT 1 FROM accounts WHERE account_name = ?', (username,))
-            conn.commit() # conn.comit() will make it so that the SQL statement will be executed
+            conn.commit()  # conn.comit() will make it so that the SQL statement will be executed
 
             if len(c.fetchall()) > 0:
                 print("Try another username")
@@ -131,10 +132,129 @@ class Assessment(QDialog):
         super(Assessment, self).__init__()
         uic.loadUi("thysys_assessmentPage.ui", self)
         self.Back.clicked.connect(self.gotoHome)
+        self.submitButton.clicked.connect(self.goResult)
 
     def gotoHome(self):
         homepageVar = Homepage()
         widget.addWidget(homepageVar)
+        widget.setCurrentIndex(widget.currentIndex() + 1)
+
+    def goResult(self):
+        chaidModel = cb.load_model(file_name="chaidModel.pkl")
+
+        age = self.ageInput.text()
+        print(age)
+
+        if self.MalecheckBox.isChecked():
+            gender = "M"
+        else:
+            gender = "F"
+
+        if self.YesPregnant.isChecked():
+            pregnant = "YES"
+        elif self.NoPregnant.isChecked():
+            pregnant = "NO"
+        else:
+            pregnant = "NaN"
+
+        if self.FirstTri.isChecked():
+            trimester = "1ST"
+        elif self.SecondTri.isChecked():
+            trimester = "2ND"
+        elif self.SecondTri.isChecked():
+            trimester = "3RD"
+        else:
+            trimester = "NaN"
+
+        if self.NormalMens.isChecked():
+            menstrualBleeding = "NORMAL"
+        elif self.AbMens.isChecked():
+            menstrualBleeding = "ABNORMAL"
+        else:
+            menstrualBleeding = "NaN"
+
+        if self.YesSwelling.isChecked():
+            goitre = "YES"
+        else:
+            goitre = "NO"
+
+        if self.YesSmoke.isChecked():
+            smoke = "YES"
+        else:
+            smoke = "NO"
+
+        if self.YesHistory.isChecked():
+            family = "YES"
+        else:
+            family = "NO"
+
+        if self.YesEmpty.isChecked():
+            constipation = "YES"
+        else:
+            constipation = "NO"
+
+        if self.YesLoose.isChecked():
+            diarrhea = "YES"
+        else:
+            diarrhea = "NO"
+
+        if self.LessSleep.isChecked():
+            sleepiness = "LESS"
+        elif self.MoreSleep.isChecked():
+            sleepiness = "MORE"
+        else:
+            sleepiness = "NORMAL"
+
+        if self.YesUneasy.isChecked():
+            nervous = "YES"
+        else:
+            nervous = "NO"
+
+        if self.YesTired.isChecked():
+            tired = "YES"
+        else:
+            tired = "NO"
+
+        if self.YesHairLoss.isChecked():
+            hairloss = "YES"
+        else:
+            hairloss = "NO"
+
+        if self.GainWeight.isChecked():
+            weight = "GAIN"
+        elif self.LossWeight.isChecked():
+            weight = "LOSS"
+        else:
+            weight = "NORMAL"
+
+        if self.AbnormalSkin.isChecked():
+            skin = "ABNORMAL"
+        else:
+            skin = "NORMAL"
+
+        if self.LowHeart.isChecked():
+            heart = "LOW"
+        elif self.HighHeart.isChecked():
+            heart = "HIGH"
+        else:
+            heart = "NORMAL"
+
+        if self.LowTemp.isChecked():
+            temp = "LOW"
+        elif self.HighTemp.isChecked():
+            temp = "HIGH"
+        else:
+            temp = "NORMAL"
+
+        values = [age, gender, pregnant, trimester, goitre, smoke, hairloss, constipation, diarrhea, family, nervous,
+                  skin, menstrualBleeding, tired, sleepiness, weight, heart, temp]
+
+        resultsPredict = cb.predict(chaidModel, values)
+
+        print("The application predicts that you may be experiencing ", resultsPredict)
+
+        resultV = Result()
+        widget.addWidget(resultV)
         widget.setCurrentIndex(widget.currentIndex() + 1)
 
 
@@ -142,9 +262,9 @@ class Result(QDialog):
     def __init__(self):
         super(Result, self).__init__()
         uic.loadUi("thysys_results.ui", self)
-        self.Back.clicked.connect(self.gotoHome)
+        self.Back.clicked.connect(self.goHome)
 
-    def gotoHome(self):
+    def goHome(self):
         homepageVar = Homepage()
         widget.addWidget(homepageVar)
         widget.setCurrentIndex(widget.currentIndex() + 1)
