@@ -16,26 +16,13 @@
   <property name="styleSheet">
    <string notr="true">background-color: rgb(255, 255, 255);</string>
   </property>
-  <widget class="QLabel" name="Question">
-   <property name="geometry">
-    <rect>
-     <x>120</x>
-     <y>260</y>
-     <width>461</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>This is your results</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="icon">
    <property name="geometry">
     <rect>
-     <x>270</x>
-     <y>50</y>
-     <width>161</width>
-     <height>141</height>
+     <x>300</x>
+     <y>10</y>
+     <width>101</width>
+     <height>81</height>
     </rect>
    </property>
    <property name="text">
@@ -52,7 +39,7 @@
    <property name="geometry">
     <rect>
      <x>300</x>
-     <y>190</y>
+     <y>90</y>
      <width>111</width>
      <height>31</height>
     </rect>
@@ -69,20 +56,20 @@ font: 87 14pt &quot;Arial Black&quot;;
   <widget class="QPushButton" name="Back">
    <property name="geometry">
     <rect>
-     <x>270</x>
-     <y>340</y>
-     <width>181</width>
-     <height>51</height>
+     <x>20</x>
+     <y>30</y>
+     <width>41</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(170, 85, 255);
 color: rgb(255, 255, 255);
 font: 75 10pt &quot;Arial&quot;;
-border-radius: 15px;</string>
+border-radius: 20px;</string>
    </property>
    <property name="text">
-    <string>Back to Home</string>
+    <string>Back </string>
    </property>
   </widget>
   <widget class="QLabel" name="label_3">
@@ -100,6 +87,129 @@ border-radius: 15px;</string>
    <property name="text">
     <string>© Icon from flaticon.com</string>
    </property>
+  </widget>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>130</y>
+     <width>671</width>
+     <height>331</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Sunken</enum>
+   </property>
+   <property name="midLineWidth">
+    <number>0</number>
+   </property>
+   <property name="editTriggers">
+    <set>QAbstractItemView::NoEditTriggers</set>
+   </property>
+   <property name="gridStyle">
+    <enum>Qt::DotLine</enum>
+   </property>
+   <column>
+    <property name="text">
+     <string>Prediction</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Age</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Gender</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Pregnant</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Trimester</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Mentrual Bleeding</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Goitre</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Smoking</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Family History</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Constipation</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Diarrhea</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Amount of Sleep</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Nervousness</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Tiredness</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Hair loss</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Weight</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Skin</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Heartbeat</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Temperature</string>
+    </property>
+   </column>
   </widget>
  </widget>
  <resources/>

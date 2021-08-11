@@ -16,28 +16,29 @@ class Ui_Form(object):
         Form.setObjectName("Form")
         Form.resize(667, 489)
         Form.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.Question = QtWidgets.QLabel(Form)
-        self.Question.setGeometry(QtCore.QRect(120, 260, 461, 16))
-        self.Question.setObjectName("Question")
         self.icon = QtWidgets.QLabel(Form)
-        self.icon.setGeometry(QtCore.QRect(270, 50, 161, 141))
+        self.icon.setGeometry(QtCore.QRect(300, 10, 101, 81))
         self.icon.setText("")
         self.icon.setPixmap(QtGui.QPixmap("thyroid.png"))
         self.icon.setScaledContents(True)
         self.icon.setObjectName("icon")
         self.thysysName = QtWidgets.QLabel(Form)
-        self.thysysName.setGeometry(QtCore.QRect(300, 190, 111, 31))
+        self.thysysName.setGeometry(QtCore.QRect(300, 90, 111, 31))
         self.thysysName.setStyleSheet("color: rgb(255, 85, 127);\n"
 "font: 87 14pt \"Arial Black\";\n"
 "")
         self.thysysName.setObjectName("thysysName")
-        self.Home = QtWidgets.QPushButton(Form)
-        self.Home.setGeometry(QtCore.QRect(270, 340, 181, 51))
-        self.Home.setStyleSheet("background-color: rgb(170, 85, 255);\n"
+        self.Back = QtWidgets.QPushButton(Form)
+        self.Back.setGeometry(QtCore.QRect(20, 30, 41, 41))
+        self.Back.setStyleSheet("background-color: rgb(170, 85, 255);\n"
 "color: rgb(255, 255, 255);\n"
 "font: 75 10pt \"Arial\";\n"
-"border-radius: 15px;")
-        self.Home.setObjectName("Home")
+"border-radius: 20px;")
+        self.Back.setObjectName("Back")
+        self.label_3 = QtWidgets.QLabel(Form)
+        self.label_3.setGeometry(QtCore.QRect(10, 470, 291, 16))
+        self.label_3.setStyleSheet("color: rgb(188, 188, 188);")
+        self.label_3.setObjectName("label_3")
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -45,9 +46,9 @@ class Ui_Form(object):
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
-        self.Question.setText(_translate("Form", "This is your results"))
         self.thysysName.setText(_translate("Form", "THY-SYS"))
-        self.Home.setText(_translate("Form", "Back to Home"))
+        self.Back.setText(_translate("Form", "Back "))
+        self.label_3.setText(_translate("Form", "© Icon from flaticon.com"))
 
 
 if __name__ == "__main__":
