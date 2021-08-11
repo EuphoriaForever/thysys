@@ -4,6 +4,8 @@ from chefboost import Chefboost as cb
 from PyQt5 import QtWidgets, uic
 from PyQt5.QtWidgets import QDialog, QApplication
 
+uName = ""
+
 
 class Landing(QDialog):
     def __init__(self):
@@ -43,6 +45,8 @@ class Login(QDialog):
 
         if len(c.fetchone()) == 1:
             print("Successfully logged in with username ", username, "and password ", password)
+            global uName
+            uName = username
             homepageVar = Homepage()
             widget.addWidget(homepageVar)
             widget.setCurrentIndex(widget.currentIndex() + 1)
@@ -112,6 +116,8 @@ class Homepage(QDialog):
         self.MyResults.clicked.connect(self.gotoResult)
 
     def gotoLanding(self):
+        global uName
+        uName = ""
         landingVar = Landing()
         widget.addWidget(landingVar)
         widget.setCurrentIndex(widget.currentIndex() + 1)
@@ -133,6 +139,7 @@ class Assessment(QDialog):
         uic.loadUi("thysys_assessmentPage.ui", self)
         self.Back.clicked.connect(self.gotoHome)
         self.submitButton.clicked.connect(self.goResult)
+        print("Your name is ", uName)
 
     def gotoHome(self):
         homepageVar = Homepage()
@@ -252,7 +259,19 @@ class Assessment(QDialog):
         resultsPredict = cb.predict(chaidModel, values)
 
         print("The application predicts that you may be experiencing ", resultsPredict)
-
+        print(uName)
+        # saving to database
+        conn = sqlite3.connect("thysys.db")
+        c = conn.cursor()
+        c.execute("INSERT INTO results(username, age, gender, pregnant, trimester, goitre, smoke, hairloss, "
+                  "constipation, diarrhea, family, nervous, skin, menstrual, tired, sleepiness, weight, "
+                  "heart, temp, class, created_at) "
+                  "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,datetime('now','localtime'))", (
+                      uName, age, gender, pregnant, trimester, goitre, smoke, hairloss, constipation, diarrhea, family,
+                      nervous,
+                      skin, menstrualBleeding, tired, sleepiness, weight, heart, temp, resultsPredict))
+        conn.commit()
+        conn.close()
         resultV = Result()
         widget.addWidget(resultV)
         widget.setCurrentIndex(widget.currentIndex() + 1)
@@ -263,6 +282,41 @@ class Result(QDialog):
         super(Result, self).__init__()
         uic.loadUi("thysys_results.ui", self)
         self.Back.clicked.connect(self.goHome)
+        self.loadData()
+
+    def loadData(self):
+        conn = sqlite3.connect("thysys.db")
+        c = conn.cursor()
+
+        self.tableWidget.setRowCount(0)
+        rowCount = self.tableWidget.rowCount()
+        tableIndex = 0
+        for row in c.execute('SELECT * FROM results WHERE username = ?', (uName,)):
+            self.tableWidget.setRowCount(rowCount+1)
+            self.tableWidget.setItem(tableIndex, 0, QtWidgets.QTableWidgetItem(row[20]))
+            self.tableWidget.setItem(tableIndex, 1, QtWidgets.QTableWidgetItem(row[2]))
+            self.tableWidget.setItem(tableIndex, 2, QtWidgets.QTableWidgetItem(row[3]))
+            self.tableWidget.setItem(tableIndex, 3, QtWidgets.QTableWidgetItem(row[4]))
+            self.tableWidget.setItem(tableIndex, 4, QtWidgets.QTableWidgetItem(row[5]))
+            self.tableWidget.setItem(tableIndex, 5, QtWidgets.QTableWidgetItem(row[14]))
+            self.tableWidget.setItem(tableIndex, 6, QtWidgets.QTableWidgetItem(row[6]))
+            self.tableWidget.setItem(tableIndex, 7, QtWidgets.QTableWidgetItem(row[7]))
+            self.tableWidget.setItem(tableIndex, 8, QtWidgets.QTableWidgetItem(row[11]))
+            self.tableWidget.setItem(tableIndex, 9, QtWidgets.QTableWidgetItem(row[9]))
+            self.tableWidget.setItem(tableIndex, 10, QtWidgets.QTableWidgetItem(row[10]))
+            self.tableWidget.setItem(tableIndex, 11, QtWidgets.QTableWidgetItem(row[16]))
+            self.tableWidget.setItem(tableIndex, 12, QtWidgets.QTableWidgetItem(row[12]))
+            self.tableWidget.setItem(tableIndex, 13, QtWidgets.QTableWidgetItem(row[15]))
+            self.tableWidget.setItem(tableIndex, 14, QtWidgets.QTableWidgetItem(row[8]))
+            self.tableWidget.setItem(tableIndex, 15, QtWidgets.QTableWidgetItem(row[17]))
+            self.tableWidget.setItem(tableIndex, 16, QtWidgets.QTableWidgetItem(row[13]))
+            self.tableWidget.setItem(tableIndex, 17, QtWidgets.QTableWidgetItem(row[18]))
+            self.tableWidget.setItem(tableIndex, 18, QtWidgets.QTableWidgetItem(row[19]))
+            print(row)
+            tableIndex += 1
+            rowCount+=1
+
+
 
     def goHome(self):
         homepageVar = Homepage()
