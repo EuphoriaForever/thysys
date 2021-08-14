@@ -14,34 +14,38 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(665, 475)
+        Form.resize(801, 601)
         Form.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.label = QtWidgets.QLabel(Form)
-        self.label.setGeometry(QtCore.QRect(240, 60, 211, 201))
+        self.label.setGeometry(QtCore.QRect(310, 90, 211, 201))
         self.label.setText("")
         self.label.setPixmap(QtGui.QPixmap("thyroid.png"))
         self.label.setScaledContents(True)
         self.label.setObjectName("label")
         self.Login = QtWidgets.QPushButton(Form)
-        self.Login.setGeometry(QtCore.QRect(120, 330, 181, 51))
+        self.Login.setGeometry(QtCore.QRect(190, 360, 181, 51))
         self.Login.setStyleSheet("background-color: rgb(170, 85, 255);\n"
 "color: rgb(255, 255, 255);\n"
 "font: 75 12pt \"Arial\";\n"
 "border-radius: 25px;")
         self.Login.setObjectName("Login")
         self.Signup = QtWidgets.QPushButton(Form)
-        self.Signup.setGeometry(QtCore.QRect(390, 330, 181, 51))
+        self.Signup.setGeometry(QtCore.QRect(460, 360, 181, 51))
         self.Signup.setStyleSheet("background-color: rgb(85, 170, 255);\n"
 "color: rgb(255, 255, 255);\n"
 "font: 12pt \"Arial\";\n"
 "border-radius: 25px;")
         self.Signup.setObjectName("Signup")
         self.label_2 = QtWidgets.QLabel(Form)
-        self.label_2.setGeometry(QtCore.QRect(280, 270, 141, 31))
+        self.label_2.setGeometry(QtCore.QRect(350, 300, 141, 31))
         self.label_2.setStyleSheet("color: rgb(255, 85, 127);\n"
 "font: 87 18pt \"Arial Black\";\n"
 "")
         self.label_2.setObjectName("label_2")
+        self.label_3 = QtWidgets.QLabel(Form)
+        self.label_3.setGeometry(QtCore.QRect(0, 570, 291, 16))
+        self.label_3.setStyleSheet("color: rgb(188, 188, 188);")
+        self.label_3.setObjectName("label_3")
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -52,6 +56,7 @@ class Ui_Form(object):
         self.Login.setText(_translate("Form", "Log In"))
         self.Signup.setText(_translate("Form", "Sign Up"))
         self.label_2.setText(_translate("Form", "THY-SYS"))
+        self.label_3.setText(_translate("Form", "© Icon from flaticon.com"))
 
 
 if __name__ == "__main__":

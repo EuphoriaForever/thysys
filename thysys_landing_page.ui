@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>665</width>
-    <height>475</height>
+    <width>801</width>
+    <height>601</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,8 +19,8 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>240</x>
-     <y>60</y>
+     <x>310</x>
+     <y>90</y>
      <width>211</width>
      <height>201</height>
     </rect>
@@ -38,8 +38,8 @@
   <widget class="QPushButton" name="Login">
    <property name="geometry">
     <rect>
-     <x>120</x>
-     <y>330</y>
+     <x>190</x>
+     <y>360</y>
      <width>181</width>
      <height>51</height>
     </rect>
@@ -57,8 +57,8 @@ border-radius: 25px;</string>
   <widget class="QPushButton" name="Signup">
    <property name="geometry">
     <rect>
-     <x>390</x>
-     <y>330</y>
+     <x>460</x>
+     <y>360</y>
      <width>181</width>
      <height>51</height>
     </rect>
@@ -76,8 +76,8 @@ border-radius: 25px;</string>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>280</x>
-     <y>270</y>
+     <x>350</x>
+     <y>300</y>
      <width>141</width>
      <height>31</height>
     </rect>
@@ -94,8 +94,8 @@ font: 87 18pt &quot;Arial Black&quot;;
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>450</y>
+     <x>0</x>
+     <y>570</y>
      <width>291</width>
      <height>16</height>
     </rect>
