@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>667</width>
-    <height>489</height>
+    <width>801</width>
+    <height>606</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,7 +19,7 @@
   <widget class="QLabel" name="icon">
    <property name="geometry">
     <rect>
-     <x>300</x>
+     <x>370</x>
      <y>10</y>
      <width>101</width>
      <height>81</height>
@@ -38,7 +38,7 @@
   <widget class="QLabel" name="thysysName">
    <property name="geometry">
     <rect>
-     <x>300</x>
+     <x>370</x>
      <y>90</y>
      <width>111</width>
      <height>31</height>
@@ -76,7 +76,7 @@ border-radius: 20px;</string>
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>470</y>
+     <y>590</y>
      <width>291</width>
      <height>16</height>
     </rect>
@@ -93,12 +93,23 @@ border-radius: 20px;</string>
     <rect>
      <x>0</x>
      <y>130</y>
-     <width>671</width>
-     <height>331</height>
+     <width>801</width>
+     <height>451</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <italic>true</italic>
+     <bold>true</bold>
+    </font>
+   </property>
    <property name="styleSheet">
-    <string notr="true"/>
+    <string notr="true">border-color: rgb(170, 0, 255);
+border:50px;
+color:rgb(115, 115, 115);</string>
    </property>
    <property name="frameShape">
     <enum>QFrame::NoFrame</enum>

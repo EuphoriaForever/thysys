@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>661</width>
-    <height>482</height>
+    <width>799</width>
+    <height>601</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,10 +19,10 @@
   <widget class="QPushButton" name="MyResults">
    <property name="geometry">
     <rect>
-     <x>270</x>
-     <y>320</y>
-     <width>181</width>
-     <height>51</height>
+     <x>310</x>
+     <y>350</y>
+     <width>211</width>
+     <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -38,9 +38,9 @@ border-radius: 15px;</string>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>270</x>
-     <y>30</y>
-     <width>181</width>
+     <x>320</x>
+     <y>20</y>
+     <width>191</width>
      <height>161</height>
     </rect>
    </property>
@@ -57,10 +57,10 @@ border-radius: 15px;</string>
   <widget class="QPushButton" name="TakeAssessment">
    <property name="geometry">
     <rect>
-     <x>270</x>
-     <y>250</y>
-     <width>181</width>
-     <height>51</height>
+     <x>310</x>
+     <y>260</y>
+     <width>211</width>
+     <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -76,8 +76,8 @@ border-radius: 15px;</string>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>290</x>
-     <y>200</y>
+     <x>350</x>
+     <y>180</y>
      <width>141</width>
      <height>31</height>
     </rect>
@@ -94,10 +94,10 @@ font: 87 18pt &quot;Arial Black&quot;;
   <widget class="QPushButton" name="Logout">
    <property name="geometry">
     <rect>
-     <x>270</x>
-     <y>390</y>
-     <width>181</width>
-     <height>51</height>
+     <x>310</x>
+     <y>450</y>
+     <width>211</width>
+     <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -113,8 +113,8 @@ border-radius: 15px;</string>
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>460</y>
+     <x>0</x>
+     <y>580</y>
      <width>291</width>
      <height>16</height>
     </rect>

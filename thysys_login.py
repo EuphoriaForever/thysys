@@ -14,59 +14,66 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(663, 486)
+        Form.resize(798, 600)
         Form.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.icon = QtWidgets.QLabel(Form)
-        self.icon.setGeometry(QtCore.QRect(260, 30, 161, 141))
+        self.icon.setGeometry(QtCore.QRect(320, 20, 191, 161))
         self.icon.setText("")
         self.icon.setPixmap(QtGui.QPixmap("thyroid.png"))
         self.icon.setScaledContents(True)
         self.icon.setObjectName("icon")
         self.thysysName = QtWidgets.QLabel(Form)
-        self.thysysName.setGeometry(QtCore.QRect(290, 170, 111, 31))
+        self.thysysName.setGeometry(QtCore.QRect(360, 180, 111, 31))
         self.thysysName.setStyleSheet("color: rgb(255, 85, 127);\n"
 "font: 87 14pt \"Arial Black\";\n"
 "")
         self.thysysName.setObjectName("thysysName")
         self.username = QtWidgets.QLineEdit(Form)
-        self.username.setGeometry(QtCore.QRect(190, 240, 291, 41))
+        self.username.setGeometry(QtCore.QRect(260, 260, 291, 41))
         self.username.setStyleSheet("border: 4px solid rgb(170, 85, 255);\n"
 "border-radius: 10px;\n"
 "\n"
 "")
         self.username.setObjectName("username")
         self.password = QtWidgets.QLineEdit(Form)
-        self.password.setGeometry(QtCore.QRect(190, 310, 291, 41))
+        self.password.setGeometry(QtCore.QRect(260, 360, 291, 41))
         self.password.setStyleSheet("border: 4px solid rgb(170, 85, 255);\n"
 "border-radius: 10px;")
         self.password.setObjectName("password")
         self.usernameLabel = QtWidgets.QLabel(Form)
-        self.usernameLabel.setGeometry(QtCore.QRect(160, 220, 81, 16))
+        self.usernameLabel.setGeometry(QtCore.QRect(230, 240, 81, 16))
         self.usernameLabel.setStyleSheet("color: rgb(190, 190, 190);\n"
 "font: 75 10pt \"MS Shell Dlg 2\";")
         self.usernameLabel.setObjectName("usernameLabel")
         self.passwordLabel = QtWidgets.QLabel(Form)
-        self.passwordLabel.setGeometry(QtCore.QRect(160, 290, 91, 16))
+        self.passwordLabel.setGeometry(QtCore.QRect(230, 340, 91, 16))
         self.passwordLabel.setStyleSheet("color: rgb(190, 190, 190);\n"
 "font: 75 10pt \"MS Shell Dlg 2\";")
         self.passwordLabel.setObjectName("passwordLabel")
         self.Login = QtWidgets.QPushButton(Form)
-        self.Login.setGeometry(QtCore.QRect(290, 380, 91, 31))
+        self.Login.setGeometry(QtCore.QRect(350, 430, 111, 41))
+        font = QtGui.QFont()
+        font.setFamily("Arial")
+        font.setPointSize(9)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(9)
+        self.Login.setFont(font)
         self.Login.setStyleSheet("background-color: rgb(170, 85, 255);\n"
 "color: rgb(255, 255, 255);\n"
 "font: 75 9pt \"Arial\";\n"
 "border-radius: 10px;")
         self.Login.setObjectName("Login")
         self.label = QtWidgets.QLabel(Form)
-        self.label.setGeometry(QtCore.QRect(190, 440, 161, 16))
+        self.label.setGeometry(QtCore.QRect(270, 510, 161, 16))
         self.label.setStyleSheet("color: rgb(156, 156, 156);")
         self.label.setObjectName("label")
-        self.pushButton = QtWidgets.QPushButton(Form)
-        self.pushButton.setGeometry(QtCore.QRect(360, 430, 93, 28))
-        self.pushButton.setStyleSheet("border-color: rgb(255, 255, 255);\n"
+        self.createAcc = QtWidgets.QPushButton(Form)
+        self.createAcc.setGeometry(QtCore.QRect(440, 500, 93, 28))
+        self.createAcc.setStyleSheet("border-color: rgb(255, 255, 255);\n"
 "background-color: rgb(255, 255, 255);\n"
 "border-radius:15px;")
-        self.pushButton.setObjectName("pushButton")
+        self.createAcc.setObjectName("createAcc")
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -79,7 +86,7 @@ class Ui_Form(object):
         self.passwordLabel.setText(_translate("Form", "Password"))
         self.Login.setText(_translate("Form", "Log In"))
         self.label.setText(_translate("Form", "Don\'t have an account yet?"))
-        self.pushButton.setText(_translate("Form", "Sign Up Now"))
+        self.createAcc.setText(_translate("Form", "Sign Up Now"))
 
 
 if __name__ == "__main__":
