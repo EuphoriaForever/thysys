@@ -162,33 +162,6 @@ color:rgb(140, 140, 140);</string>
       <string>© Icon from flaticon.com</string>
      </property>
     </widget>
-    <widget class="QCheckBox" name="MalecheckBox">
-     <property name="geometry">
-      <rect>
-       <x>260</x>
-       <y>90</y>
-       <width>81</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>11</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(103, 103, 103);
-
-</string>
-     </property>
-     <property name="text">
-      <string>Male</string>
-     </property>
-     <property name="tristate">
-      <bool>false</bool>
-     </property>
-    </widget>
     <widget class="QLabel" name="Question_3">
      <property name="geometry">
       <rect>
@@ -211,28 +184,6 @@ color:rgb(140, 140, 140);</string>
      </property>
      <property name="text">
       <string>Gender Assigned at birth:</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="FemalecheckBox">
-     <property name="geometry">
-      <rect>
-       <x>350</x>
-       <y>90</y>
-       <width>91</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>11</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(103, 103, 103);</string>
-     </property>
-     <property name="text">
-      <string>Female</string>
      </property>
     </widget>
     <widget class="QLabel" name="Question_4">
@@ -299,50 +250,6 @@ border-radius: 10px;
       <string>Are you currently pregnant? :</string>
      </property>
     </widget>
-    <widget class="QCheckBox" name="YesPregnant">
-     <property name="geometry">
-      <rect>
-       <x>270</x>
-       <y>220</y>
-       <width>61</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>11</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(103, 103, 103);</string>
-     </property>
-     <property name="text">
-      <string>Yes</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="NoPregnant">
-     <property name="geometry">
-      <rect>
-       <x>350</x>
-       <y>220</y>
-       <width>61</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>11</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(103, 103, 103);</string>
-     </property>
-     <property name="text">
-      <string>No</string>
-     </property>
-    </widget>
     <widget class="QLabel" name="Question_6">
      <property name="geometry">
       <rect>
@@ -365,72 +272,6 @@ border-radius: 10px;
      </property>
      <property name="text">
       <string>[If yes...] What trimester ? :</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="FirstTri">
-     <property name="geometry">
-      <rect>
-       <x>270</x>
-       <y>280</y>
-       <width>61</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>11</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(103, 103, 103);</string>
-     </property>
-     <property name="text">
-      <string>First</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="SecondTri">
-     <property name="geometry">
-      <rect>
-       <x>350</x>
-       <y>280</y>
-       <width>91</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>11</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(103, 103, 103);</string>
-     </property>
-     <property name="text">
-      <string>Second</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="ThirdTri">
-     <property name="geometry">
-      <rect>
-       <x>450</x>
-       <y>280</y>
-       <width>91</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>11</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(103, 103, 103);</string>
-     </property>
-     <property name="text">
-      <string>Third</string>
      </property>
     </widget>
     <widget class="QLabel" name="Question_7">
@@ -457,94 +298,6 @@ border-radius: 10px;
       <string>[If no...] Are there noticeable changes in your menstrual cycle?</string>
      </property>
     </widget>
-    <widget class="QCheckBox" name="NormalMens">
-     <property name="geometry">
-      <rect>
-       <x>270</x>
-       <y>370</y>
-       <width>81</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>11</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(103, 103, 103);</string>
-     </property>
-     <property name="text">
-      <string>Normal</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="AbMens">
-     <property name="geometry">
-      <rect>
-       <x>380</x>
-       <y>370</y>
-       <width>111</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>11</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(103, 103, 103);</string>
-     </property>
-     <property name="text">
-      <string>Abnormal</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="NAMens">
-     <property name="geometry">
-      <rect>
-       <x>510</x>
-       <y>370</y>
-       <width>91</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>11</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(103, 103, 103);</string>
-     </property>
-     <property name="text">
-      <string>N/A</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="NATri">
-     <property name="geometry">
-      <rect>
-       <x>520</x>
-       <y>280</y>
-       <width>91</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>11</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(103, 103, 103);</string>
-     </property>
-     <property name="text">
-      <string>N/A</string>
-     </property>
-    </widget>
     <widget class="Line" name="line">
      <property name="geometry">
       <rect>
@@ -560,6 +313,244 @@ border-radius: 10px;
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
+    </widget>
+    <widget class="QWidget" name="widget" native="true">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>70</y>
+       <width>191</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <widget class="QRadioButton" name="FemalecheckBox">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>20</y>
+        <width>81</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Female</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="MalecheckBox">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>71</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Male</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="widget_2" native="true">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>190</y>
+       <width>141</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <widget class="QRadioButton" name="YesPregnant">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>95</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Yes</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="NoPregnant">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>20</y>
+        <width>51</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>No</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="widget_3" native="true">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>250</y>
+       <width>321</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <widget class="QRadioButton" name="FirstTri">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>81</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>First</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="SecondTri">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>20</y>
+        <width>81</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Second</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="ThirdTri">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>20</y>
+        <width>71</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Third</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="NATri">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>20</y>
+        <width>61</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>N/A</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="widget_4" native="true">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>360</y>
+       <width>341</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <widget class="QRadioButton" name="NormalMens">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>91</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Normal</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="AbMens">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>10</y>
+        <width>95</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Abnormal</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="NAMens">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>10</y>
+        <width>95</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>N/A</string>
+      </property>
+     </widget>
     </widget>
    </widget>
    <widget class="QWidget" name="q2">
@@ -604,54 +595,6 @@ border-radius: 10px;
      </property>
      <property name="text">
       <string>Are there any visible swelling or lumps at the front of your neck?</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="NoSwelling">
-     <property name="geometry">
-      <rect>
-       <x>490</x>
-       <y>100</y>
-       <width>61</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>14</pointsize>
-       <weight>50</weight>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(103, 103, 103);</string>
-     </property>
-     <property name="text">
-      <string>No</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="YesSwelling">
-     <property name="geometry">
-      <rect>
-       <x>270</x>
-       <y>100</y>
-       <width>61</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>14</pointsize>
-       <weight>50</weight>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(103, 103, 103);</string>
-     </property>
-     <property name="text">
-      <string>Yes</string>
      </property>
     </widget>
     <widget class="Line" name="line_2">
@@ -767,35 +710,57 @@ border-radius: 10px;
       <string>3. Feel the area of your neck above the colarbone for any nodules</string>
      </property>
     </widget>
+    <widget class="QWidget" name="widget_6" native="true">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>90</y>
+       <width>281</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <widget class="QRadioButton" name="YesSwelling">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>95</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Yes</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="NoSwelling">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>20</y>
+        <width>95</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>No</string>
+      </property>
+     </widget>
+    </widget>
    </widget>
    <widget class="QWidget" name="q3">
     <attribute name="title">
      <string>Smoking and Background</string>
     </attribute>
-    <widget class="QCheckBox" name="YesSmoke">
-     <property name="geometry">
-      <rect>
-       <x>260</x>
-       <y>90</y>
-       <width>61</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>14</pointsize>
-       <weight>50</weight>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(103, 103, 103);</string>
-     </property>
-     <property name="text">
-      <string>Yes</string>
-     </property>
-    </widget>
     <widget class="QLabel" name="Question_13">
      <property name="geometry">
       <rect>
@@ -818,30 +783,6 @@ border-radius: 10px;
      </property>
      <property name="text">
       <string>Do you smoke?</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="NoSmoke">
-     <property name="geometry">
-      <rect>
-       <x>480</x>
-       <y>90</y>
-       <width>61</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>14</pointsize>
-       <weight>50</weight>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(103, 103, 103);</string>
-     </property>
-     <property name="text">
-      <string>No</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_5">
@@ -876,50 +817,6 @@ border-radius: 10px;
       <enum>Qt::Horizontal</enum>
      </property>
     </widget>
-    <widget class="QCheckBox" name="YesHistory">
-     <property name="geometry">
-      <rect>
-       <x>260</x>
-       <y>290</y>
-       <width>61</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>14</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(103, 103, 103);</string>
-     </property>
-     <property name="text">
-      <string>Yes</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="NoHistory">
-     <property name="geometry">
-      <rect>
-       <x>480</x>
-       <y>290</y>
-       <width>61</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>14</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(103, 103, 103);</string>
-     </property>
-     <property name="text">
-      <string>No</string>
-     </property>
-    </widget>
     <widget class="QLabel" name="Question_16">
      <property name="geometry">
       <rect>
@@ -944,55 +841,103 @@ border-radius: 10px;
       <string>Is there a history of thyroid problems in your family?</string>
      </property>
     </widget>
+    <widget class="QWidget" name="widget_7" native="true">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>90</y>
+       <width>281</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <widget class="QRadioButton" name="YesSmoke">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>95</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Yes</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="NoSmoke">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>20</y>
+        <width>95</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>No</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="widget_8" native="true">
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>280</y>
+       <width>341</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <widget class="QRadioButton" name="YesHistory">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>20</y>
+        <width>95</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Yes</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="NoHistory">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>20</y>
+        <width>95</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>No</string>
+      </property>
+     </widget>
+    </widget>
    </widget>
    <widget class="QWidget" name="tab_3">
     <attribute name="title">
      <string>Bowels</string>
     </attribute>
-    <widget class="QCheckBox" name="YesEmpty">
-     <property name="geometry">
-      <rect>
-       <x>270</x>
-       <y>110</y>
-       <width>61</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>14</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(103, 103, 103);</string>
-     </property>
-     <property name="text">
-      <string>Yes</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="NoEmpty">
-     <property name="geometry">
-      <rect>
-       <x>490</x>
-       <y>110</y>
-       <width>61</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>14</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(103, 103, 103);</string>
-     </property>
-     <property name="text">
-      <string>No</string>
-     </property>
-    </widget>
     <widget class="QLabel" name="Question_14">
      <property name="geometry">
       <rect>
@@ -1015,50 +960,6 @@ border-radius: 10px;
      </property>
      <property name="text">
       <string>Do you have difficulty with emptying your bowels?</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="YesLoose">
-     <property name="geometry">
-      <rect>
-       <x>270</x>
-       <y>300</y>
-       <width>61</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>14</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(103, 103, 103);</string>
-     </property>
-     <property name="text">
-      <string>Yes</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="NoLoose">
-     <property name="geometry">
-      <rect>
-       <x>490</x>
-       <y>300</y>
-       <width>61</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>14</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(103, 103, 103);</string>
-     </property>
-     <property name="text">
-      <string>No</string>
      </property>
     </widget>
     <widget class="QLabel" name="Question_15">
@@ -1117,77 +1018,103 @@ border-radius: 10px;
       <string>© Icon from flaticon.com</string>
      </property>
     </widget>
+    <widget class="QWidget" name="widget_9" native="true">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>100</y>
+       <width>341</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <widget class="QRadioButton" name="YesEmpty">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>20</y>
+        <width>95</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Yes</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="NoEmpty">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>20</y>
+        <width>95</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>No</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="widget_10" native="true">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>290</y>
+       <width>341</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <widget class="QRadioButton" name="YesLoose">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>20</y>
+        <width>95</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Yes</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="NoLoose">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>20</y>
+        <width>95</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>No</string>
+      </property>
+     </widget>
+    </widget>
    </widget>
    <widget class="QWidget" name="tab_5">
     <attribute name="title">
      <string>Sleep and Emotions</string>
     </attribute>
-    <widget class="QCheckBox" name="YesUneasy">
-     <property name="geometry">
-      <rect>
-       <x>260</x>
-       <y>200</y>
-       <width>61</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>14</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(103, 103, 103);</string>
-     </property>
-     <property name="text">
-      <string>Yes</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="NoUneasy">
-     <property name="geometry">
-      <rect>
-       <x>480</x>
-       <y>200</y>
-       <width>61</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>14</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(103, 103, 103);</string>
-     </property>
-     <property name="text">
-      <string>No</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="LessSleep">
-     <property name="geometry">
-      <rect>
-       <x>260</x>
-       <y>80</y>
-       <width>81</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>14</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(103, 103, 103);</string>
-     </property>
-     <property name="text">
-      <string>Less</string>
-     </property>
-    </widget>
     <widget class="QLabel" name="Question_17">
      <property name="geometry">
       <rect>
@@ -1252,50 +1179,6 @@ border-radius: 10px;
       <string>Are you feeling uneasy lately?</string>
      </property>
     </widget>
-    <widget class="QCheckBox" name="NormalSleep">
-     <property name="geometry">
-      <rect>
-       <x>480</x>
-       <y>80</y>
-       <width>111</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>14</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(103, 103, 103);</string>
-     </property>
-     <property name="text">
-      <string>Normal</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="MoreSleep">
-     <property name="geometry">
-      <rect>
-       <x>370</x>
-       <y>80</y>
-       <width>81</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>14</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(103, 103, 103);</string>
-     </property>
-     <property name="text">
-      <string>More</string>
-     </property>
-    </widget>
     <widget class="QLabel" name="label_7">
      <property name="geometry">
       <rect>
@@ -1328,50 +1211,6 @@ border-radius: 10px;
       <enum>Qt::Horizontal</enum>
      </property>
     </widget>
-    <widget class="QCheckBox" name="NoTired">
-     <property name="geometry">
-      <rect>
-       <x>480</x>
-       <y>330</y>
-       <width>61</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>14</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(103, 103, 103);</string>
-     </property>
-     <property name="text">
-      <string>No</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="YesTired">
-     <property name="geometry">
-      <rect>
-       <x>260</x>
-       <y>330</y>
-       <width>61</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>14</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(103, 103, 103);</string>
-     </property>
-     <property name="text">
-      <string>Yes</string>
-     </property>
-    </widget>
     <widget class="QLabel" name="Question_27">
      <property name="geometry">
       <rect>
@@ -1395,6 +1234,162 @@ border-radius: 10px;
      <property name="text">
       <string>Are you feeling tired lately?</string>
      </property>
+    </widget>
+    <widget class="QWidget" name="widget_11" native="true">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>180</y>
+       <width>341</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <widget class="QRadioButton" name="YesUneasy">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>20</y>
+        <width>95</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Yes</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="NoUneasy">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>20</y>
+        <width>95</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>No</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="widget_12" native="true">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>310</y>
+       <width>341</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <widget class="QRadioButton" name="YesTired">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>20</y>
+        <width>95</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Yes</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="NoTired">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>20</y>
+        <width>95</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>No</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="widget_13" native="true">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>60</y>
+       <width>401</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <widget class="QRadioButton" name="LessSleep">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>91</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Less</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="MoreSleep">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>10</y>
+        <width>95</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>More</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="NormalSleep">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>10</y>
+        <width>121</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Normal</string>
+      </property>
+     </widget>
     </widget>
    </widget>
    <widget class="QWidget" name="tab_6">
@@ -1425,102 +1420,6 @@ border-radius: 10px;
       <string>Are you having any hair loss problems lately? </string>
      </property>
     </widget>
-    <widget class="QCheckBox" name="NoHairLoss">
-     <property name="geometry">
-      <rect>
-       <x>570</x>
-       <y>30</y>
-       <width>61</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>14</pointsize>
-       <weight>50</weight>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(103, 103, 103);</string>
-     </property>
-     <property name="text">
-      <string>No</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="YesHairLoss">
-     <property name="geometry">
-      <rect>
-       <x>490</x>
-       <y>30</y>
-       <width>61</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>14</pointsize>
-       <weight>50</weight>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(103, 103, 103);</string>
-     </property>
-     <property name="text">
-      <string>Yes</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="GainWeight">
-     <property name="geometry">
-      <rect>
-       <x>490</x>
-       <y>90</y>
-       <width>71</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>14</pointsize>
-       <weight>50</weight>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(103, 103, 103);</string>
-     </property>
-     <property name="text">
-      <string>Gain</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="LossWeight">
-     <property name="geometry">
-      <rect>
-       <x>570</x>
-       <y>90</y>
-       <width>71</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>14</pointsize>
-       <weight>50</weight>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(103, 103, 103);</string>
-     </property>
-     <property name="text">
-      <string>Loss</string>
-     </property>
-    </widget>
     <widget class="QLabel" name="Question_20">
      <property name="geometry">
       <rect>
@@ -1543,78 +1442,6 @@ border-radius: 10px;
      </property>
      <property name="text">
       <string>If there any noticeable change in your weight?</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="NormalWeight">
-     <property name="geometry">
-      <rect>
-       <x>650</x>
-       <y>90</y>
-       <width>101</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>14</pointsize>
-       <weight>50</weight>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(103, 103, 103);</string>
-     </property>
-     <property name="text">
-      <string>Normal</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="NormalSkin">
-     <property name="geometry">
-      <rect>
-       <x>650</x>
-       <y>160</y>
-       <width>111</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>14</pointsize>
-       <weight>50</weight>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(103, 103, 103);</string>
-     </property>
-     <property name="text">
-      <string>Normal</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="AbnormalSkin">
-     <property name="geometry">
-      <rect>
-       <x>490</x>
-       <y>160</y>
-       <width>131</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>14</pointsize>
-       <weight>50</weight>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(103, 103, 103);</string>
-     </property>
-     <property name="text">
-      <string>Abnormal</string>
      </property>
     </widget>
     <widget class="QLabel" name="Question_21">
@@ -1746,6 +1573,162 @@ border-radius: 10px;
       <string>2. Thicker skin does not have hair follicles nor glands that produce oils or sweat</string>
      </property>
     </widget>
+    <widget class="QWidget" name="widget_14" native="true">
+     <property name="geometry">
+      <rect>
+       <x>490</x>
+       <y>10</y>
+       <width>171</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <widget class="QRadioButton" name="YesHairLoss">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>95</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Yes</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="NoHairLoss">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>10</y>
+        <width>51</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>No</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="widget_15" native="true">
+     <property name="geometry">
+      <rect>
+       <x>490</x>
+       <y>70</y>
+       <width>351</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <widget class="QRadioButton" name="GainWeight">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>95</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Gain</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="LossWeight">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>10</y>
+        <width>81</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Loss</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="NormalWeight">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>10</y>
+        <width>95</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Normal</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="widget_16" native="true">
+     <property name="geometry">
+      <rect>
+       <x>480</x>
+       <y>160</y>
+       <width>281</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <widget class="QRadioButton" name="AbnormalSkin">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>121</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Abnormal</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="NormalSkin">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>10</y>
+        <width>95</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Normal</string>
+      </property>
+     </widget>
+    </widget>
    </widget>
    <widget class="QWidget" name="tab_9">
     <attribute name="title">
@@ -1807,100 +1790,6 @@ border-radius: 10px;
       <string>Is there noticeable change in your heartbeat?</string>
      </property>
     </widget>
-    <widget class="QCheckBox" name="HighHeart">
-     <property name="geometry">
-      <rect>
-       <x>370</x>
-       <y>120</y>
-       <width>81</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>14</pointsize>
-       <weight>50</weight>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(103, 103, 103);</string>
-     </property>
-     <property name="text">
-      <string>High</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="NormalHeight">
-     <property name="geometry">
-      <rect>
-       <x>470</x>
-       <y>120</y>
-       <width>111</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>14</pointsize>
-       <weight>50</weight>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(103, 103, 103);</string>
-     </property>
-     <property name="text">
-      <string>Normal</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="LowHeart">
-     <property name="geometry">
-      <rect>
-       <x>270</x>
-       <y>120</y>
-       <width>71</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>14</pointsize>
-       <weight>50</weight>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(103, 103, 103);</string>
-     </property>
-     <property name="text">
-      <string>Low</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="NormalTemp">
-     <property name="geometry">
-      <rect>
-       <x>460</x>
-       <y>310</y>
-       <width>111</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>14</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(103, 103, 103);</string>
-     </property>
-     <property name="text">
-      <string>Normal</string>
-     </property>
-    </widget>
     <widget class="QLabel" name="Question_26">
      <property name="geometry">
       <rect>
@@ -1925,49 +1814,133 @@ border-radius: 10px;
       <string>How would you describe our body temperature?</string>
      </property>
     </widget>
-    <widget class="QCheckBox" name="HighTemp">
+    <widget class="QWidget" name="widget_17" native="true">
      <property name="geometry">
       <rect>
-       <x>370</x>
-       <y>310</y>
-       <width>81</width>
-       <height>20</height>
+       <x>250</x>
+       <y>100</y>
+       <width>351</width>
+       <height>51</height>
       </rect>
      </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>14</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(103, 103, 103);</string>
-     </property>
-     <property name="text">
-      <string>High</string>
-     </property>
+     <widget class="QRadioButton" name="LowHeart">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>95</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Low</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="HighHeart">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>10</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>High</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="NormalHeight">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>10</y>
+        <width>95</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Normal</string>
+      </property>
+     </widget>
     </widget>
-    <widget class="QCheckBox" name="LowTemp">
+    <widget class="QWidget" name="widget_18" native="true">
      <property name="geometry">
       <rect>
-       <x>270</x>
-       <y>310</y>
-       <width>71</width>
-       <height>20</height>
+       <x>250</x>
+       <y>300</y>
+       <width>351</width>
+       <height>61</height>
       </rect>
      </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>14</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(103, 103, 103);</string>
-     </property>
-     <property name="text">
-      <string>Low</string>
-     </property>
+     <widget class="QRadioButton" name="LowTemp">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>95</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Low</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="HighTemp">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>10</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>High</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="NormalTemp">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>10</y>
+        <width>95</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Normal</string>
+      </property>
+     </widget>
     </widget>
    </widget>
   </widget>

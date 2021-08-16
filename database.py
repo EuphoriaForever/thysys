@@ -33,8 +33,8 @@ c = conn.cursor()
 
 # c.execute("""CREATE TABLE IF NOT EXISTS results (
 #         result_id INTEGER PRIMARY KEY,
-#         username text NOT NULL,
-#         age text NOT NULL,
+#         username text NOT NULL, [1]
+#         age text NOT NULL,[2]
 #         gender text NOT NULL,
 #         pregnant text NOT NULL,
 #         trimester text NOT NULL,
@@ -43,7 +43,7 @@ c = conn.cursor()
 #         hairloss text NOT NULL, [8]
 #         constipation text NOT NULL,
 #         diarrhea text NOT NULL,
-#         family text NOT NULL,
+#         family text NOT NULL,[11]
 #         nervous text NOT NULL,
 #         skin text NOT NULL,  [13]
 #         menstrual text NOT NULL,
@@ -56,11 +56,11 @@ c = conn.cursor()
 #         created_at text NOT NULL
 #     )""")
 
-# c.execute("SELECT * FROM results")
-# print(c.fetchall())
+c.execute("SELECT * FROM results")
+print(c.fetchall())
 
 # c.execute("DROP TABLE results")
-# c.execute("DELETE FROM results WHERE result_id = 1")
+# c.execute("DELETE FROM results WHERE result_id = 2")
 print("Command executed successfully")
 #commit our command
 conn.commit()
