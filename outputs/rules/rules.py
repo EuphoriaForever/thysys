@@ -18,9 +18,9 @@ def findDecision(obj): #obj[0]: age, obj[1]: sex, obj[2]: pregnant, obj[3]: trim
 									# {"feature": "trimester", "instances": 37, "metric_value": 12.3823, "depth": 9}
 									if obj[3] == '2ND':
 										return 'NORMAL'
-									elif obj[3] == '1ST':
-										return 'NORMAL'
 									elif obj[3] == '3RD':
+										return 'NORMAL'
+									elif obj[3] == '1ST':
 										return 'NORMAL'
 									else: return 'NORMAL'
 								elif obj[1] == 'M':
