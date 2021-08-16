@@ -14,46 +14,40 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(801, 606)
+        Form.resize(802, 600)
         Form.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.icon = QtWidgets.QLabel(Form)
-        self.icon.setGeometry(QtCore.QRect(370, 10, 101, 81))
-        self.icon.setText("")
-        self.icon.setPixmap(QtGui.QPixmap("thyroid.png"))
-        self.icon.setScaledContents(True)
-        self.icon.setObjectName("icon")
+        self.Back = QtWidgets.QPushButton(Form)
+        self.Back.setGeometry(QtCore.QRect(20, 30, 61, 51))
+        self.Back.setStyleSheet("color: rgb(255, 255, 255);\n"
+"background-color: rgb(170, 170, 255);\n"
+"border-radius:20px;")
+        self.Back.setObjectName("Back")
         self.thysysName = QtWidgets.QLabel(Form)
-        self.thysysName.setGeometry(QtCore.QRect(370, 90, 111, 31))
+        self.thysysName.setGeometry(QtCore.QRect(350, 100, 111, 31))
         self.thysysName.setStyleSheet("color: rgb(255, 85, 127);\n"
 "font: 87 14pt \"Arial Black\";\n"
 "")
         self.thysysName.setObjectName("thysysName")
-        self.Back = QtWidgets.QPushButton(Form)
-        self.Back.setGeometry(QtCore.QRect(20, 30, 41, 41))
-        self.Back.setStyleSheet("background-color: rgb(170, 85, 255);\n"
-"color: rgb(255, 255, 255);\n"
-"font: 75 10pt \"Arial\";\n"
-"border-radius: 20px;")
-        self.Back.setObjectName("Back")
-        self.label_3 = QtWidgets.QLabel(Form)
-        self.label_3.setGeometry(QtCore.QRect(10, 590, 291, 16))
-        self.label_3.setStyleSheet("color: rgb(188, 188, 188);")
-        self.label_3.setObjectName("label_3")
+        self.icon = QtWidgets.QLabel(Form)
+        self.icon.setGeometry(QtCore.QRect(350, 10, 111, 91))
+        self.icon.setText("")
+        self.icon.setPixmap(QtGui.QPixmap("thyroid.png"))
+        self.icon.setScaledContents(True)
+        self.icon.setObjectName("icon")
         self.tableWidget = QtWidgets.QTableWidget(Form)
-        self.tableWidget.setGeometry(QtCore.QRect(0, 130, 801, 451))
+        self.tableWidget.setGeometry(QtCore.QRect(0, 150, 801, 401))
         font = QtGui.QFont()
-        font.setFamily("Arial")
-        font.setPointSize(10)
+        font.setFamily("arial")
+        font.setPointSize(12)
         font.setBold(True)
-        font.setItalic(True)
+        font.setItalic(False)
         font.setWeight(75)
         self.tableWidget.setFont(font)
-        self.tableWidget.setStyleSheet("border-color: rgb(170, 0, 255);\n"
-"border:50px;\n"
-"color:rgb(115, 115, 115);")
+        self.tableWidget.setStyleSheet("color: rgb(135, 135, 135);\n"
+"font-family: arial;\n"
+"font-weight: bold;")
         self.tableWidget.setFrameShape(QtWidgets.QFrame.NoFrame)
-        self.tableWidget.setFrameShadow(QtWidgets.QFrame.Sunken)
-        self.tableWidget.setMidLineWidth(0)
+        self.tableWidget.setFrameShadow(QtWidgets.QFrame.Raised)
         self.tableWidget.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
         self.tableWidget.setGridStyle(QtCore.Qt.DotLine)
         self.tableWidget.setObjectName("tableWidget")
@@ -97,6 +91,10 @@ class Ui_Form(object):
         self.tableWidget.setHorizontalHeaderItem(17, item)
         item = QtWidgets.QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(18, item)
+        self.label_3 = QtWidgets.QLabel(Form)
+        self.label_3.setGeometry(QtCore.QRect(0, 570, 291, 16))
+        self.label_3.setStyleSheet("color: rgb(188, 188, 188);")
+        self.label_3.setObjectName("label_3")
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -104,9 +102,8 @@ class Ui_Form(object):
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
+        self.Back.setText(_translate("Form", "Back"))
         self.thysysName.setText(_translate("Form", "THY-SYS"))
-        self.Back.setText(_translate("Form", "Back "))
-        self.label_3.setText(_translate("Form", "© Icon from flaticon.com"))
         item = self.tableWidget.horizontalHeaderItem(0)
         item.setText(_translate("Form", "Prediction"))
         item = self.tableWidget.horizontalHeaderItem(1)
@@ -118,7 +115,7 @@ class Ui_Form(object):
         item = self.tableWidget.horizontalHeaderItem(4)
         item.setText(_translate("Form", "Trimester"))
         item = self.tableWidget.horizontalHeaderItem(5)
-        item.setText(_translate("Form", "Mentrual Bleeding"))
+        item.setText(_translate("Form", "Menstrual Cycle"))
         item = self.tableWidget.horizontalHeaderItem(6)
         item.setText(_translate("Form", "Goitre"))
         item = self.tableWidget.horizontalHeaderItem(7)
@@ -136,15 +133,16 @@ class Ui_Form(object):
         item = self.tableWidget.horizontalHeaderItem(13)
         item.setText(_translate("Form", "Tiredness"))
         item = self.tableWidget.horizontalHeaderItem(14)
-        item.setText(_translate("Form", "Hair loss"))
+        item.setText(_translate("Form", "Hairloss"))
         item = self.tableWidget.horizontalHeaderItem(15)
         item.setText(_translate("Form", "Weight"))
         item = self.tableWidget.horizontalHeaderItem(16)
         item.setText(_translate("Form", "Skin"))
         item = self.tableWidget.horizontalHeaderItem(17)
-        item.setText(_translate("Form", "Heartbeat"))
+        item.setText(_translate("Form", "Heart Rate"))
         item = self.tableWidget.horizontalHeaderItem(18)
         item.setText(_translate("Form", "Temperature"))
+        self.label_3.setText(_translate("Form", "© Icon from flaticon.com"))
 
 
 if __name__ == "__main__":
