@@ -1,5 +1,7 @@
 import sys
 import sqlite3
+from typing import Union, Any
+
 from chefboost import Chefboost as cb
 from PyQt5 import QtWidgets, uic
 from PyQt5.QtWidgets import QDialog, QApplication
@@ -37,25 +39,33 @@ class Login(QDialog):
         username = self.username.text()
         password = self.password.text()
 
-        conn = sqlite3.connect("thysys.db")
-        c = conn.cursor()
-
-        c.execute('SELECT 1 FROM accounts WHERE account_name = ? AND password = ?', (username, password))
-        conn.commit()  # conn.comit() will make it so that the SQL statement will be executed
-
-        if len(c.fetchone()) == 1:
-            print("Successfully logged in with username ", username, "and password ", password)
-            global uName
-            uName = username
-            homepageVar = Homepage()
-            widget.addWidget(homepageVar)
-            widget.setCurrentIndex(widget.currentIndex() + 1)
+        if len(username) == 0 or len(password) == 0:
+            self.error.setText("Please input a username or password")
         else:
-            print("Account has yet to exist. will now hand u over to sign up page")
-            self.gotosignup()
+            conn = sqlite3.connect("thysys.db")
+            c = conn.cursor()
 
-        # close our connection
-        conn.close()
+            query = 'SELECT password FROM accounts WHERE account_name=\'' + username + "\'"
+            c.execute(query)
+            resultPass = c.fetchone()  # conn.comit() will make it so that the SQL statement will be executed
+
+            if resultPass is not None:
+                if resultPass[0] == password:
+                    print("Successfully logged in with username ", username, "and password ", password)
+                    global uName
+                    uName = username
+                    homepageVar = Homepage()
+                    widget.addWidget(homepageVar)
+                    widget.setCurrentIndex(widget.currentIndex() + 1)
+                    self.error.setText("")
+                else:
+                    self.error.setText('Invalid password')
+            else:
+                self.error.setText("Invalid username")
+            # except Exception as e:
+            #     self.error.setText("Invalid username")
+            #     print('Exception: {}'.format(e))
+            #     raise Exception(e)
 
     def gotosignup(self):
         signupVar = Signup()
@@ -74,32 +84,38 @@ class Signup(QDialog):
 
     def signupfunction(self):
         username = self.username.text()
-        if self.password.text() == self.confirm_password.text():
-            password = self.password.text()
-
-            # if password and confirm password are the same, we open a connection to database
-            conn = sqlite3.connect("thysys.db")
-            c = conn.cursor()
-            # check if there exists an account with the same username we want
-            c.execute('SELECT 1 FROM accounts WHERE account_name = ?', (username,))
-            conn.commit()  # conn.comit() will make it so that the SQL statement will be executed
-
-            if len(c.fetchall()) > 0:
-                print("Try another username")
-            else:
-                print("does not exist")
-                c.execute("INSERT INTO accounts(account_name,password,is_active,created_at,updated_at,is_admin) "
-                          "VALUES (?,?,1,datetime('now','localtime'),NULL,1)", (username, password))
-                conn.commit()
-                print("successfully created username", username, "with password", password)
-                homepageVar = Homepage()
-                widget.addWidget(homepageVar)
-                widget.setCurrentIndex(widget.currentIndex() + 1)
-
-            # close our connection
-            conn.close()
+        password = self.password.text()
+        if len(username) == 0 or len(password) == 0:
+            self.error.setText("Please input a username or password")
         else:
-            print("password and confirm password does not match. try again")
+            if password == self.confirm_password.text():
+                password = self.password.text()
+
+                # if password and confirm password are the same, we open a connection to database
+                conn = sqlite3.connect("thysys.db")
+                c = conn.cursor()
+                # check if there exists an account with the same username we want
+                c.execute('SELECT 1 FROM accounts WHERE account_name = ?', (username,))
+                conn.commit()  # conn.comit() will make it so that the SQL statement will be executed
+
+                if len(c.fetchall()) > 0:
+                    print("Try another username")
+                    self.error.setText("Username already exists")
+                else:
+                    print("does not exist")
+                    c.execute("INSERT INTO accounts(account_name,password,is_active,created_at,updated_at,is_admin) "
+                              "VALUES (?,?,1,datetime('now','localtime'),NULL,1)", (username, password))
+                    conn.commit()
+                    print("successfully created username", username, "with password", password)
+                    homepageVar = Homepage()
+                    widget.addWidget(homepageVar)
+                    widget.setCurrentIndex(widget.currentIndex() + 1)
+
+                # close our connection
+                conn.close()
+            else:
+                print("password and confirm password does not match. try again")
+                self.error.setText("Passwords did not match")
 
     def gotologin(self):
         loginVar = Login()
@@ -292,7 +308,7 @@ class Result(QDialog):
         rowCount = self.tableWidget.rowCount()
         tableIndex = 0
         for row in c.execute('SELECT * FROM results WHERE username = ?', (uName,)):
-            self.tableWidget.setRowCount(rowCount+1)
+            self.tableWidget.setRowCount(rowCount + 1)
             self.tableWidget.setItem(tableIndex, 0, QtWidgets.QTableWidgetItem(row[20]))
             self.tableWidget.setItem(tableIndex, 1, QtWidgets.QTableWidgetItem(row[2]))
             self.tableWidget.setItem(tableIndex, 2, QtWidgets.QTableWidgetItem(row[3]))
@@ -314,9 +330,7 @@ class Result(QDialog):
             self.tableWidget.setItem(tableIndex, 18, QtWidgets.QTableWidgetItem(row[19]))
             print(row)
             tableIndex += 1
-            rowCount+=1
-
-
+            rowCount += 1
 
     def goHome(self):
         homepageVar = Homepage()

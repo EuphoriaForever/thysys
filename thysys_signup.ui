@@ -148,25 +148,6 @@ font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
     <string>Confirm Password</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="Signup">
-   <property name="geometry">
-    <rect>
-     <x>370</x>
-     <y>460</y>
-     <width>91</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(85, 170, 255);
-color: rgb(255, 255, 255);
-font: 75 9pt &quot;Arial&quot;;
-border-radius: 10px;</string>
-   </property>
-   <property name="text">
-    <string>Sign Up</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
@@ -214,6 +195,43 @@ border-radius:15px;</string>
     <string notr="true">border: 4px solid rgb(85, 170, 255);
 border-radius: 50px;</string>
    </property>
+   <widget class="QPushButton" name="Signup">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>250</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(85, 170, 255);
+color: rgb(255, 255, 255);
+font: 75 9pt &quot;Arial&quot;;
+border-radius: 10px;</string>
+    </property>
+    <property name="text">
+     <string>Sign Up</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="error">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>220</y>
+      <width>241</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: rgb(0, 0, 0);
+color: rgb(255, 0, 0);
+text-align:center;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
   </widget>
   <zorder>widget</zorder>
   <zorder>icon</zorder>
@@ -224,7 +242,6 @@ border-radius: 50px;</string>
   <zorder>usernameLabel</zorder>
   <zorder>passwordLabel</zorder>
   <zorder>confirmPasswordLabel</zorder>
-  <zorder>Signup</zorder>
   <zorder>label</zorder>
   <zorder>loginAcc</zorder>
  </widget>
