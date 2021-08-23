@@ -201,6 +201,32 @@ border-radius:15px;</string>
     <string>Log In Now</string>
    </property>
   </widget>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>220</y>
+     <width>441</width>
+     <height>341</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 4px solid rgb(85, 170, 255);
+border-radius: 50px;</string>
+   </property>
+  </widget>
+  <zorder>widget</zorder>
+  <zorder>icon</zorder>
+  <zorder>thysysName</zorder>
+  <zorder>username</zorder>
+  <zorder>password</zorder>
+  <zorder>confirm_password</zorder>
+  <zorder>usernameLabel</zorder>
+  <zorder>passwordLabel</zorder>
+  <zorder>confirmPasswordLabel</zorder>
+  <zorder>Signup</zorder>
+  <zorder>label</zorder>
+  <zorder>loginAcc</zorder>
  </widget>
  <resources/>
  <connections/>
