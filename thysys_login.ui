@@ -117,34 +117,6 @@ font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
     <string>Password</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="Login">
-   <property name="geometry">
-    <rect>
-     <x>350</x>
-     <y>430</y>
-     <width>111</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Arial</family>
-     <pointsize>9</pointsize>
-     <weight>9</weight>
-     <italic>false</italic>
-     <bold>false</bold>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(170, 85, 255);
-color: rgb(255, 255, 255);
-font: 75 9pt &quot;Arial&quot;;
-border-radius: 10px;</string>
-   </property>
-   <property name="text">
-    <string>Log In</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
@@ -192,6 +164,52 @@ border-radius:15px;</string>
     <string notr="true">border: 4px solid rgb(170, 85, 255);
 border-radius: 50px;</string>
    </property>
+   <widget class="QLabel" name="error">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>190</y>
+      <width>241</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: rgb(0, 0, 0);
+color: rgb(255, 0, 0);
+text-align:center;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Login">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>230</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>9</pointsize>
+      <weight>9</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(170, 85, 255);
+color: rgb(255, 255, 255);
+font: 75 9pt &quot;Arial&quot;;
+border-radius: 10px;</string>
+    </property>
+    <property name="text">
+     <string>Log In</string>
+    </property>
+   </widget>
   </widget>
   <zorder>widget</zorder>
   <zorder>icon</zorder>
@@ -200,7 +218,6 @@ border-radius: 50px;</string>
   <zorder>password</zorder>
   <zorder>usernameLabel</zorder>
   <zorder>passwordLabel</zorder>
-  <zorder>Login</zorder>
   <zorder>label</zorder>
   <zorder>createAcc</zorder>
  </widget>
