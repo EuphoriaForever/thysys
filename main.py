@@ -3,8 +3,8 @@ import sqlite3
 from typing import Union, Any
 
 from chefboost import Chefboost as cb
-from PyQt5 import QtWidgets, uic
-from PyQt5.QtWidgets import QDialog, QApplication
+from PyQt5 import QtWidgets, uic, QtGui
+from PyQt5.QtWidgets import QDialog, QApplication, QMessageBox
 from joblib import dump, load
 import sklearn
 import mlxtend
@@ -136,6 +136,7 @@ class Homepage(QDialog):
         self.Logout.clicked.connect(self.gotoLanding)
         self.TakeAssessment.clicked.connect(self.gotoAssessment)
         self.MyResults.clicked.connect(self.gotoResult)
+        self.info.clicked.connect(self.popUpMessage)
 
     def gotoLanding(self):
         global uName
@@ -153,6 +154,15 @@ class Homepage(QDialog):
         resultVar = Result()
         widget.addWidget(resultVar)
         widget.setCurrentIndex(widget.currentIndex() + 1)
+
+    def popUpMessage(self):
+        msg = QMessageBox()
+        msg.setWindowTitle("About THY-SYS")
+        msg.setText("Hello and welcome to THY-SYS")
+        msg.setIcon(QMessageBox.Information)
+        msg.setInformativeText("THY-SYS is an app that helps predict the likelihood of a person experiencing thyroid diseases based on their symptoms")
+        msg.setDetailedText("To predict what you may be experiencing, click the TAKE A SELF-ASSESSMENT button. To see results from previous assessment, click the RESULT button")
+        x = msg.exec_()
 
 
 class Assessment(QDialog):
@@ -357,5 +367,7 @@ widget = QtWidgets.QStackedWidget()
 widget.addWidget(mainwindow)
 widget.setFixedWidth(801)
 widget.setFixedHeight(601)
+widget.setWindowTitle("THY-SYS")
+widget.setWindowIcon(QtGui.QIcon('thyroid.png'))
 widget.show()
 app.exec_()

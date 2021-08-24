@@ -126,6 +126,53 @@ border-radius: 15px;</string>
     <string>© Icon from flaticon.com</string>
    </property>
   </widget>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>230</y>
+     <width>371</width>
+     <height>321</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:5px solid qlineargradient(spread:pad, x1:0, y1:0, x2:0.78486, y2:0.869, stop:0.364486 rgba(170, 85, 255, 255), stop:1 rgba(85, 170, 255, 255));
+border-radius:50px;</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="info">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>41</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(170, 170, 255);
+border-radius:20px;</string>
+   </property>
+   <property name="text">
+    <string>ⓘ</string>
+   </property>
+  </widget>
+  <zorder>widget</zorder>
+  <zorder>MyResults</zorder>
+  <zorder>label</zorder>
+  <zorder>TakeAssessment</zorder>
+  <zorder>label_2</zorder>
+  <zorder>Logout</zorder>
+  <zorder>label_3</zorder>
+  <zorder>info</zorder>
  </widget>
  <resources/>
  <connections/>
