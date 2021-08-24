@@ -3,11 +3,20 @@ import sqlite3
 from typing import Union, Any
 
 from chefboost import Chefboost as cb
+<<<<<<< Updated upstream
 from PyQt5 import QtWidgets, uic, QtGui
 from PyQt5.QtWidgets import QDialog, QApplication, QMessageBox
 from joblib import dump, load
 import sklearn
 import mlxtend
+=======
+from PyQt5 import QtWidgets, uic
+from PyQt5.QtWidgets import QDialog, QApplication
+from PyQt5 import QtGui
+from PyQt5.QtGui import QDoubleValidator, QValidator
+from PyQt5.QtWidgets import QMessageBox
+from joblib import load
+>>>>>>> Stashed changes
 #provides common algorithm like decision trees, neural networks, etc
 from sklearn.svm import SVC, NuSVC
 from mlxtend.classifier import StackingClassifier, StackingCVClassifier
