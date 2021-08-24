@@ -1663,16 +1663,16 @@ border-radius: 10px;
     <widget class="QLabel" name="Question_19">
      <property name="geometry">
       <rect>
-       <x>160</x>
+       <x>120</x>
        <y>20</y>
-       <width>481</width>
+       <width>591</width>
        <height>31</height>
       </rect>
      </property>
      <property name="font">
       <font>
        <family>Arial</family>
-       <pointsize>11</pointsize>
+       <pointsize>14</pointsize>
        <weight>50</weight>
        <bold>false</bold>
       </font>
@@ -1687,8 +1687,8 @@ border-radius: 10px;
     <widget class="QLabel" name="Question_20">
      <property name="geometry">
       <rect>
-       <x>210</x>
-       <y>130</y>
+       <x>190</x>
+       <y>120</y>
        <width>461</width>
        <height>31</height>
       </rect>
@@ -1696,7 +1696,7 @@ border-radius: 10px;
      <property name="font">
       <font>
        <family>Arial</family>
-       <pointsize>11</pointsize>
+       <pointsize>14</pointsize>
        <weight>50</weight>
        <bold>false</bold>
       </font>
@@ -1711,16 +1711,16 @@ border-radius: 10px;
     <widget class="QLabel" name="Question_21">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>290</y>
-       <width>771</width>
+       <x>100</x>
+       <y>280</y>
+       <width>621</width>
        <height>31</height>
       </rect>
      </property>
      <property name="font">
       <font>
        <family>Arial</family>
-       <pointsize>11</pointsize>
+       <pointsize>14</pointsize>
        <weight>50</weight>
        <bold>false</bold>
       </font>
@@ -1729,7 +1729,7 @@ border-radius: 10px;
       <string notr="true">color: rgb(103, 103, 103);</string>
      </property>
      <property name="text">
-      <string>Have you been experiencing excessive flushing and sweating or extremely coarse and dry skin?</string>
+      <string>Have you been experiencing excessive flushing and sweating </string>
      </property>
     </widget>
     <widget class="QLabel" name="label_8">
@@ -1787,7 +1787,7 @@ border-radius: 10px;
       </property>
       <property name="font">
        <font>
-        <pointsize>12</pointsize>
+        <pointsize>14</pointsize>
        </font>
       </property>
       <property name="text">
@@ -1805,7 +1805,7 @@ border-radius: 10px;
       </property>
       <property name="font">
        <font>
-        <pointsize>12</pointsize>
+        <pointsize>14</pointsize>
        </font>
       </property>
       <property name="text">
@@ -1817,9 +1817,9 @@ border-radius: 10px;
      <property name="geometry">
       <rect>
        <x>250</x>
-       <y>160</y>
+       <y>150</y>
        <width>341</width>
-       <height>91</height>
+       <height>101</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -1831,12 +1831,12 @@ border-radius: 10px;
         <x>10</x>
         <y>40</y>
         <width>161</width>
-        <height>20</height>
+        <height>31</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>11</pointsize>
+        <pointsize>12</pointsize>
        </font>
       </property>
       <property name="text">
@@ -1847,14 +1847,14 @@ border-radius: 10px;
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>70</y>
-        <width>231</width>
-        <height>20</height>
+        <y>69</y>
+        <width>261</width>
+        <height>31</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>11</pointsize>
+        <pointsize>12</pointsize>
        </font>
       </property>
       <property name="text">
@@ -1866,13 +1866,13 @@ border-radius: 10px;
        <rect>
         <x>10</x>
         <y>10</y>
-        <width>151</width>
+        <width>161</width>
         <height>20</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>11</pointsize>
+        <pointsize>12</pointsize>
        </font>
       </property>
       <property name="text">
@@ -1884,10 +1884,15 @@ border-radius: 10px;
      <property name="geometry">
       <rect>
        <x>250</x>
-       <y>330</y>
+       <y>350</y>
        <width>281</width>
        <height>31</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
      </property>
      <property name="styleSheet">
       <string notr="true">color: rgb(103, 103, 103);</string>
@@ -1903,7 +1908,7 @@ border-radius: 10px;
       </property>
       <property name="font">
        <font>
-        <pointsize>12</pointsize>
+        <pointsize>14</pointsize>
        </font>
       </property>
       <property name="text">
@@ -1921,7 +1926,7 @@ border-radius: 10px;
       </property>
       <property name="font">
        <font>
-        <pointsize>12</pointsize>
+        <pointsize>14</pointsize>
        </font>
       </property>
       <property name="text">
@@ -1933,7 +1938,7 @@ border-radius: 10px;
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>120</y>
+       <y>110</y>
        <width>800</width>
        <height>1</height>
       </rect>
@@ -1943,6 +1948,28 @@ border-radius: 10px;
      </property>
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>310</y>
+       <width>371</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(103, 103, 103);</string>
+     </property>
+     <property name="text">
+      <string>or extremely coarse and dry skin?</string>
      </property>
     </widget>
    </widget>
