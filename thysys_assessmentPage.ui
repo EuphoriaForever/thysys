@@ -7,8 +7,126 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>600</height>
+    <height>598</height>
    </rect>
+  </property>
+  <property name="palette">
+   <palette>
+    <active>
+     <colorrole role="WindowText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>61</red>
+        <green>61</green>
+        <blue>61</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Button">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </active>
+    <inactive>
+     <colorrole role="WindowText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>61</red>
+        <green>61</green>
+        <blue>61</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Button">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </inactive>
+    <disabled>
+     <colorrole role="WindowText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>120</red>
+        <green>120</green>
+        <blue>120</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Button">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </disabled>
+   </palette>
   </property>
   <property name="windowTitle">
    <string>Form</string>
@@ -80,6 +198,97 @@ border-radius:20px;</string>
      <height>451</height>
     </rect>
    </property>
+   <property name="palette">
+    <palette>
+     <active>
+      <colorrole role="Button">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Base">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Window">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </active>
+     <inactive>
+      <colorrole role="Button">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Base">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Window">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </inactive>
+     <disabled>
+      <colorrole role="Button">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Base">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Window">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </disabled>
+    </palette>
+   </property>
    <property name="font">
     <font>
      <family>Arial</family>
@@ -93,9 +302,28 @@ border-radius:20px;</string>
     <bool>false</bool>
    </property>
    <property name="styleSheet">
-    <string notr="true">border-color: rgb(170, 0, 255);
-border:50px;
-color:rgb(140, 140, 140);</string>
+    <string notr="true">QTabWidget::pane {
+  border: 1px solid lightgray;
+  top:-1px; 
+  background: rgb(245, 245, 245);
+  color:rgb(140, 140, 140);
+} 
+
+QTabBar::tab {
+  background:rgb(255, 255, 255); 
+  border: 2px solid rgb(170, 170, 255); 
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  color:rgb(170, 170, 255);
+  padding: 5px;
+} 
+
+QTabBar::tab:selected { 
+  background: rgb(255, 255, 255); 
+  margin-bottom: -2px; 
+  color: rgb(255, 85, 127);
+}
+</string>
    </property>
    <property name="tabPosition">
     <enum>QTabWidget::North</enum>
@@ -150,7 +378,7 @@ color:rgb(140, 140, 140);</string>
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>410</y>
+       <y>400</y>
        <width>291</width>
        <height>16</height>
       </rect>
@@ -308,7 +536,7 @@ border-radius: 10px;
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(163, 163, 163);</string>
+      <string notr="true">background-color: rgb(170, 170, 255);</string>
      </property>
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
@@ -322,6 +550,9 @@ border-radius: 10px;
        <width>191</width>
        <height>61</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(103, 103, 103);</string>
      </property>
      <widget class="QRadioButton" name="FemalecheckBox">
       <property name="geometry">
@@ -369,6 +600,9 @@ border-radius: 10px;
        <height>61</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(103, 103, 103);</string>
+     </property>
      <widget class="QRadioButton" name="YesPregnant">
       <property name="geometry">
        <rect>
@@ -414,6 +648,9 @@ border-radius: 10px;
        <width>321</width>
        <height>51</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(103, 103, 103);</string>
      </property>
      <widget class="QRadioButton" name="FirstTri">
       <property name="geometry">
@@ -496,6 +733,9 @@ border-radius: 10px;
        <width>341</width>
        <height>41</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(103, 103, 103);</string>
      </property>
      <widget class="QRadioButton" name="NormalMens">
       <property name="geometry">
@@ -607,7 +847,7 @@ border-radius: 10px;
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(176, 176, 176);</string>
+      <string notr="true">background-color: rgb(170, 170, 255);</string>
      </property>
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
@@ -719,6 +959,9 @@ border-radius: 10px;
        <height>51</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(103, 103, 103);</string>
+     </property>
      <widget class="QRadioButton" name="YesSwelling">
       <property name="geometry">
        <rect>
@@ -788,8 +1031,8 @@ border-radius: 10px;
     <widget class="QLabel" name="label_5">
      <property name="geometry">
       <rect>
-       <x>0</x>
-       <y>410</y>
+       <x>10</x>
+       <y>400</y>
        <width>291</width>
        <height>16</height>
       </rect>
@@ -811,7 +1054,7 @@ border-radius: 10px;
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(176, 176, 176);</string>
+      <string notr="true">background-color: rgb(170, 170, 255);</string>
      </property>
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
@@ -849,6 +1092,9 @@ border-radius: 10px;
        <width>281</width>
        <height>51</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(103, 103, 103);</string>
      </property>
      <widget class="QRadioButton" name="YesSmoke">
       <property name="geometry">
@@ -895,6 +1141,9 @@ border-radius: 10px;
        <width>341</width>
        <height>51</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(103, 103, 103);</string>
      </property>
      <widget class="QRadioButton" name="YesHistory">
       <property name="geometry">
@@ -996,7 +1245,7 @@ border-radius: 10px;
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(176, 176, 176);</string>
+      <string notr="true">background-color: rgb(170, 170, 255);</string>
      </property>
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
@@ -1006,7 +1255,7 @@ border-radius: 10px;
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>410</y>
+       <y>390</y>
        <width>291</width>
        <height>16</height>
       </rect>
@@ -1026,6 +1275,9 @@ border-radius: 10px;
        <width>341</width>
        <height>51</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(103, 103, 103);</string>
      </property>
      <widget class="QRadioButton" name="YesEmpty">
       <property name="geometry">
@@ -1072,6 +1324,9 @@ border-radius: 10px;
        <width>341</width>
        <height>51</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(103, 103, 103);</string>
      </property>
      <widget class="QRadioButton" name="YesLoose">
       <property name="geometry">
@@ -1149,7 +1404,7 @@ border-radius: 10px;
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(176, 176, 176);</string>
+      <string notr="true">background-color: rgb(170, 170, 255);</string>
      </property>
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
@@ -1158,9 +1413,9 @@ border-radius: 10px;
     <widget class="QLabel" name="Question_18">
      <property name="geometry">
       <rect>
-       <x>250</x>
+       <x>180</x>
        <y>140</y>
-       <width>321</width>
+       <width>511</width>
        <height>41</height>
       </rect>
      </property>
@@ -1176,7 +1431,7 @@ border-radius: 10px;
       <string notr="true">color: rgb(103, 103, 103);</string>
      </property>
      <property name="text">
-      <string>Are you feeling uneasy lately?</string>
+      <string>Have you been feeling uneasy or felt temors?</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_7">
@@ -1205,7 +1460,7 @@ border-radius: 10px;
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(176, 176, 176);</string>
+      <string notr="true">background-color: rgb(170, 170, 255);</string>
      </property>
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
@@ -1214,9 +1469,9 @@ border-radius: 10px;
     <widget class="QLabel" name="Question_27">
      <property name="geometry">
       <rect>
-       <x>260</x>
-       <y>270</y>
-       <width>321</width>
+       <x>140</x>
+       <y>260</y>
+       <width>591</width>
        <height>41</height>
       </rect>
      </property>
@@ -1232,7 +1487,7 @@ border-radius: 10px;
       <string notr="true">color: rgb(103, 103, 103);</string>
      </property>
      <property name="text">
-      <string>Are you feeling tired lately?</string>
+      <string>Have you felt fatigue or extreme tiredness for a while now?</string>
      </property>
     </widget>
     <widget class="QWidget" name="widget_11" native="true">
@@ -1243,6 +1498,9 @@ border-radius: 10px;
        <width>341</width>
        <height>51</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(103, 103, 103);</string>
      </property>
      <widget class="QRadioButton" name="YesUneasy">
       <property name="geometry">
@@ -1290,6 +1548,9 @@ border-radius: 10px;
        <height>51</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(103, 103, 103);</string>
+     </property>
      <widget class="QRadioButton" name="YesTired">
       <property name="geometry">
        <rect>
@@ -1330,18 +1591,21 @@ border-radius: 10px;
     <widget class="QWidget" name="widget_13" native="true">
      <property name="geometry">
       <rect>
-       <x>220</x>
+       <x>110</x>
        <y>60</y>
-       <width>401</width>
+       <width>621</width>
        <height>51</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(103, 103, 103);</string>
      </property>
      <widget class="QRadioButton" name="LessSleep">
       <property name="geometry">
        <rect>
         <x>10</x>
         <y>10</y>
-        <width>91</width>
+        <width>191</width>
         <height>20</height>
        </rect>
       </property>
@@ -1351,15 +1615,15 @@ border-radius: 10px;
        </font>
       </property>
       <property name="text">
-       <string>Less</string>
+       <string>Less than usual</string>
       </property>
      </widget>
      <widget class="QRadioButton" name="MoreSleep">
       <property name="geometry">
        <rect>
-        <x>130</x>
+        <x>220</x>
         <y>10</y>
-        <width>95</width>
+        <width>201</width>
         <height>20</height>
        </rect>
       </property>
@@ -1369,13 +1633,13 @@ border-radius: 10px;
        </font>
       </property>
       <property name="text">
-       <string>More</string>
+       <string>More than usual</string>
       </property>
      </widget>
      <widget class="QRadioButton" name="NormalSleep">
       <property name="geometry">
        <rect>
-        <x>260</x>
+        <x>450</x>
         <y>10</y>
         <width>121</width>
         <height>20</height>
@@ -1399,16 +1663,16 @@ border-radius: 10px;
     <widget class="QLabel" name="Question_19">
      <property name="geometry">
       <rect>
-       <x>20</x>
+       <x>160</x>
        <y>20</y>
-       <width>461</width>
+       <width>481</width>
        <height>31</height>
       </rect>
      </property>
      <property name="font">
       <font>
        <family>Arial</family>
-       <pointsize>14</pointsize>
+       <pointsize>11</pointsize>
        <weight>50</weight>
        <bold>false</bold>
       </font>
@@ -1417,14 +1681,14 @@ border-radius: 10px;
       <string notr="true">color: rgb(103, 103, 103);</string>
      </property>
      <property name="text">
-      <string>Are you having any hair loss problems lately? </string>
+      <string>Are you having any hair loss or brittle hair problems lately? </string>
      </property>
     </widget>
     <widget class="QLabel" name="Question_20">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>80</y>
+       <x>210</x>
+       <y>130</y>
        <width>461</width>
        <height>31</height>
       </rect>
@@ -1432,7 +1696,7 @@ border-radius: 10px;
      <property name="font">
       <font>
        <family>Arial</family>
-       <pointsize>14</pointsize>
+       <pointsize>11</pointsize>
        <weight>50</weight>
        <bold>false</bold>
       </font>
@@ -1448,15 +1712,15 @@ border-radius: 10px;
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>130</y>
-       <width>681</width>
+       <y>290</y>
+       <width>771</width>
        <height>31</height>
       </rect>
      </property>
      <property name="font">
       <font>
        <family>Arial</family>
-       <pointsize>14</pointsize>
+       <pointsize>11</pointsize>
        <weight>50</weight>
        <bold>false</bold>
       </font>
@@ -1465,14 +1729,14 @@ border-radius: 10px;
       <string notr="true">color: rgb(103, 103, 103);</string>
      </property>
      <property name="text">
-      <string>Have you noticed your skin getting thinner/thicker or is it normal?</string>
+      <string>Have you been experiencing excessive flushing and sweating or extremely coarse and dry skin?</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_8">
      <property name="geometry">
       <rect>
-       <x>0</x>
-       <y>410</y>
+       <x>10</x>
+       <y>390</y>
        <width>291</width>
        <height>16</height>
       </rect>
@@ -1488,99 +1752,29 @@ border-radius: 10px;
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>210</y>
+       <y>265</y>
        <width>800</width>
        <height>1</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(176, 176, 176);</string>
+      <string notr="true">background-color: rgb(170, 170, 255);</string>
      </property>
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
     </widget>
-    <widget class="QLabel" name="Question_22">
-     <property name="geometry">
-      <rect>
-       <x>310</x>
-       <y>240</y>
-       <width>211</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>12</pointsize>
-       <weight>50</weight>
-       <italic>true</italic>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(103, 103, 103);</string>
-     </property>
-     <property name="text">
-      <string>Thin Skin vs Thick Skin</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="Question_23">
-     <property name="geometry">
-      <rect>
-       <x>110</x>
-       <y>280</y>
-       <width>631</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>12</pointsize>
-       <weight>50</weight>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(103, 103, 103);</string>
-     </property>
-     <property name="text">
-      <string>1. Thin Skin is when you see the veins, bones, or tendons more clearly </string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="Question_24">
-     <property name="geometry">
-      <rect>
-       <x>70</x>
-       <y>320</y>
-       <width>701</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Arial</family>
-       <pointsize>12</pointsize>
-       <weight>50</weight>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(103, 103, 103);</string>
-     </property>
-     <property name="text">
-      <string>2. Thicker skin does not have hair follicles nor glands that produce oils or sweat</string>
-     </property>
-    </widget>
     <widget class="QWidget" name="widget_14" native="true">
      <property name="geometry">
       <rect>
-       <x>490</x>
-       <y>10</y>
-       <width>171</width>
+       <x>250</x>
+       <y>60</y>
+       <width>261</width>
        <height>41</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(103, 103, 103);</string>
      </property>
      <widget class="QRadioButton" name="YesHairLoss">
       <property name="geometry">
@@ -1593,7 +1787,7 @@ border-radius: 10px;
       </property>
       <property name="font">
        <font>
-        <pointsize>14</pointsize>
+        <pointsize>12</pointsize>
        </font>
       </property>
       <property name="text">
@@ -1603,7 +1797,7 @@ border-radius: 10px;
      <widget class="QRadioButton" name="NoHairLoss">
       <property name="geometry">
        <rect>
-        <x>90</x>
+        <x>180</x>
         <y>10</y>
         <width>51</width>
         <height>20</height>
@@ -1611,7 +1805,7 @@ border-radius: 10px;
       </property>
       <property name="font">
        <font>
-        <pointsize>14</pointsize>
+        <pointsize>12</pointsize>
        </font>
       </property>
       <property name="text">
@@ -1622,98 +1816,104 @@ border-radius: 10px;
     <widget class="QWidget" name="widget_15" native="true">
      <property name="geometry">
       <rect>
-       <x>490</x>
-       <y>70</y>
-       <width>351</width>
-       <height>41</height>
+       <x>250</x>
+       <y>160</y>
+       <width>341</width>
+       <height>91</height>
       </rect>
      </property>
-     <widget class="QRadioButton" name="GainWeight">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>10</y>
-        <width>95</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>14</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>Gain</string>
-      </property>
-     </widget>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(103, 103, 103);</string>
+     </property>
      <widget class="QRadioButton" name="LossWeight">
       <property name="geometry">
        <rect>
-        <x>110</x>
-        <y>10</y>
-        <width>81</width>
+        <x>10</x>
+        <y>40</y>
+        <width>161</width>
         <height>20</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>14</pointsize>
+        <pointsize>11</pointsize>
        </font>
       </property>
       <property name="text">
-       <string>Loss</string>
+       <string>Loss Weight</string>
       </property>
      </widget>
      <widget class="QRadioButton" name="NormalWeight">
       <property name="geometry">
        <rect>
-        <x>210</x>
-        <y>10</y>
-        <width>95</width>
+        <x>10</x>
+        <y>70</y>
+        <width>231</width>
         <height>20</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>14</pointsize>
+        <pointsize>11</pointsize>
        </font>
       </property>
       <property name="text">
-       <string>Normal</string>
+       <string>No changes in my weight</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="GainWeight">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>151</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Gained Weight</string>
       </property>
      </widget>
     </widget>
     <widget class="QWidget" name="widget_16" native="true">
      <property name="geometry">
       <rect>
-       <x>480</x>
-       <y>160</y>
+       <x>250</x>
+       <y>330</y>
        <width>281</width>
        <height>31</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(103, 103, 103);</string>
      </property>
      <widget class="QRadioButton" name="AbnormalSkin">
       <property name="geometry">
        <rect>
         <x>10</x>
         <y>10</y>
-        <width>121</width>
+        <width>61</width>
         <height>20</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>14</pointsize>
+        <pointsize>12</pointsize>
        </font>
       </property>
       <property name="text">
-       <string>Abnormal</string>
+       <string>Yes</string>
       </property>
      </widget>
      <widget class="QRadioButton" name="NormalSkin">
       <property name="geometry">
        <rect>
-        <x>150</x>
+        <x>180</x>
         <y>10</y>
         <width>95</width>
         <height>20</height>
@@ -1721,13 +1921,29 @@ border-radius: 10px;
       </property>
       <property name="font">
        <font>
-        <pointsize>14</pointsize>
+        <pointsize>12</pointsize>
        </font>
       </property>
       <property name="text">
-       <string>Normal</string>
+       <string>No</string>
       </property>
      </widget>
+    </widget>
+    <widget class="Line" name="line_9">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>120</y>
+       <width>800</width>
+       <height>1</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(170, 170, 255);</string>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
     </widget>
    </widget>
    <widget class="QWidget" name="tab_9">
@@ -1737,8 +1953,8 @@ border-radius: 10px;
     <widget class="QLabel" name="label_9">
      <property name="geometry">
       <rect>
-       <x>0</x>
-       <y>410</y>
+       <x>10</x>
+       <y>390</y>
        <width>291</width>
        <height>16</height>
       </rect>
@@ -1760,7 +1976,7 @@ border-radius: 10px;
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(176, 176, 176);</string>
+      <string notr="true">background-color: rgb(170, 170, 255);</string>
      </property>
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
@@ -1769,9 +1985,9 @@ border-radius: 10px;
     <widget class="QLabel" name="Question_25">
      <property name="geometry">
       <rect>
-       <x>180</x>
-       <y>50</y>
-       <width>471</width>
+       <x>120</x>
+       <y>20</y>
+       <width>631</width>
        <height>31</height>
       </rect>
      </property>
@@ -1787,7 +2003,7 @@ border-radius: 10px;
       <string notr="true">color: rgb(103, 103, 103);</string>
      </property>
      <property name="text">
-      <string>Is there noticeable change in your heartbeat?</string>
+      <string>Is there noticeable change in your heartbeat and/or breathing?</string>
      </property>
     </widget>
     <widget class="QLabel" name="Question_26">
@@ -1817,128 +2033,135 @@ border-radius: 10px;
     <widget class="QWidget" name="widget_17" native="true">
      <property name="geometry">
       <rect>
-       <x>250</x>
-       <y>100</y>
-       <width>351</width>
-       <height>51</height>
+       <x>60</x>
+       <y>60</y>
+       <width>671</width>
+       <height>111</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+color: rgb(103, 103, 103);</string>
      </property>
      <widget class="QRadioButton" name="LowHeart">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>10</y>
-        <width>95</width>
+        <x>150</x>
+        <y>0</y>
+        <width>431</width>
         <height>31</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>14</pointsize>
+        <pointsize>11</pointsize>
        </font>
       </property>
       <property name="text">
-       <string>Low</string>
+       <string>I have breathing problems and a slower heart rate</string>
       </property>
      </widget>
      <widget class="QRadioButton" name="HighHeart">
       <property name="geometry">
        <rect>
-        <x>110</x>
-        <y>10</y>
-        <width>81</width>
+        <x>150</x>
+        <y>30</y>
+        <width>231</width>
         <height>31</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>14</pointsize>
+        <pointsize>11</pointsize>
        </font>
       </property>
       <property name="text">
-       <string>High</string>
+       <string>I have heart palpitations</string>
       </property>
      </widget>
      <widget class="QRadioButton" name="NormalHeight">
       <property name="geometry">
        <rect>
-        <x>210</x>
-        <y>10</y>
-        <width>95</width>
+        <x>150</x>
+        <y>60</y>
+        <width>341</width>
         <height>31</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>14</pointsize>
+        <pointsize>11</pointsize>
        </font>
       </property>
       <property name="text">
-       <string>Normal</string>
+       <string>My breathing and heart rate is normal</string>
       </property>
      </widget>
     </widget>
     <widget class="QWidget" name="widget_18" native="true">
      <property name="geometry">
       <rect>
-       <x>250</x>
-       <y>300</y>
-       <width>351</width>
-       <height>61</height>
+       <x>140</x>
+       <y>270</y>
+       <width>511</width>
+       <height>111</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(103, 103, 103);</string>
      </property>
      <widget class="QRadioButton" name="LowTemp">
       <property name="geometry">
        <rect>
-        <x>10</x>
+        <x>70</x>
         <y>10</y>
-        <width>95</width>
+        <width>281</width>
         <height>31</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>14</pointsize>
+        <pointsize>11</pointsize>
        </font>
       </property>
       <property name="text">
-       <string>Low</string>
+       <string>Sensitivity to cold temperatures</string>
       </property>
      </widget>
      <widget class="QRadioButton" name="HighTemp">
       <property name="geometry">
        <rect>
-        <x>110</x>
-        <y>10</y>
-        <width>81</width>
+        <x>70</x>
+        <y>40</y>
+        <width>271</width>
         <height>31</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>14</pointsize>
+        <pointsize>11</pointsize>
        </font>
       </property>
       <property name="text">
-       <string>High</string>
+       <string>Sensitivity to hot temperatures</string>
       </property>
      </widget>
      <widget class="QRadioButton" name="NormalTemp">
       <property name="geometry">
        <rect>
-        <x>210</x>
-        <y>10</y>
-        <width>95</width>
+        <x>70</x>
+        <y>70</y>
+        <width>231</width>
         <height>31</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>14</pointsize>
+        <pointsize>11</pointsize>
        </font>
       </property>
       <property name="text">
-       <string>Normal</string>
+       <string>My temperature is normal</string>
       </property>
      </widget>
     </widget>
