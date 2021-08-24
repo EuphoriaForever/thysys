@@ -5,6 +5,12 @@ from typing import Union, Any
 from chefboost import Chefboost as cb
 from PyQt5 import QtWidgets, uic
 from PyQt5.QtWidgets import QDialog, QApplication
+from joblib import dump, load
+import sklearn
+import mlxtend
+#provides common algorithm like decision trees, neural networks, etc
+from sklearn.svm import SVC, NuSVC
+from mlxtend.classifier import StackingClassifier, StackingCVClassifier
 
 uName = ""
 
@@ -154,8 +160,11 @@ class Assessment(QDialog):
         super(Assessment, self).__init__()
         uic.loadUi("thysys_assessmentPage.ui", self)
         self.Back.clicked.connect(self.gotoHome)
-        self.submitButton.clicked.connect(self.goResult)
+        #Commented out for testing purposes
+        # self.submitButton.clicked.connect(self.goResult)
+        self.submitButton.clicked.connect(self.svm_knn_result)
         print("Your name is ", uName)
+        print (mlxtend.__version__)
 
     def gotoHome(self):
         homepageVar = Homepage()
@@ -292,6 +301,10 @@ class Assessment(QDialog):
         widget.addWidget(resultV)
         widget.setCurrentIndex(widget.currentIndex() + 1)
 
+    def svm_knn_result(self):
+        print("YO")
+        svm_knn = load('svm-knn-7.joblib')
+        print(svm_knn.predict([[56,1,1,2,1,0,0,0,1,0,1,0,1,1,0,0,2,2]]))
 
 class Result(QDialog):
     def __init__(self):
