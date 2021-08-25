@@ -398,17 +398,10 @@ class Assessment(QDialog):
                             hairloss_stack, constipation_stack, diarrhea_stack, family_stack, nervous_stack,
                             skin_stack, mens_stack, tired_stack, sleepiness_stack, weight_stack, 
                             heart_stack, temp_stack]
-            self.goChaidResult(values_chaid)
-            self.gotoStackResult(values_stack)
+            self.gotoStackResult(values_stack, values_chaid)
         else:
             self.gotoError("Incomplete Form.")
         
-            
-    def goChaidResult(self, values):
-        chaidModel = cb.load_model(file_name="chaidModel.pkl")
-        resultsPredict = cb.predict(chaidModel, values)
-        print("The application predicts that you may be experiencing ", resultsPredict)
-        self.saveToDatabase(values, resultsPredict)
 
     def saveToDatabase(self, values, results):
         # saving to database
@@ -418,7 +411,9 @@ class Assessment(QDialog):
                   "constipation, diarrhea, family, nervous, skin, menstrual, tired, sleepiness, weight, "
                   "heart, temp, class, created_at) "
                   "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,datetime('now','localtime'))", (
-                      uName, values, results))
+                      uName, values[0], values[1], values[2], values[3], values[4], values[5], values[6],  
+                      values[7], values[8], values[9], values[10], values[11], values[12], values[13],
+                      values[14], values[15], values[16], values[17], results))
         conn.commit()
         conn.close()
         resultV = Result()
@@ -429,15 +424,18 @@ class Assessment(QDialog):
         if prediction == 0:
             return "Hypothyroidism"
         elif prediction == 1:
-            return"Normally Functioning Thyroid"
+            return "Euthyroidism"
         else:
             return "Hyperthyroidism"
 
-    def gotoStackResult(self,values):
+    def gotoStackResult(self,values_stack, values_chaid):
         svm_knn = load('svm-knn-7.joblib')
-        resultsPredict = svm_knn.predict([values])
+        resultsPredict = svm_knn.predict([values_stack])
         resultsPredict = self.interpretClass(resultsPredict[0])
         print("The application predicts that you may be experiencing ", resultsPredict)
+
+        #Call method to save to database
+        self.saveToDatabase(values_chaid, resultsPredict)
 
 
 class Result(QDialog):
