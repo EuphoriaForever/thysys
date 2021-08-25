@@ -56,8 +56,8 @@ font: 87 14pt &quot;Arial Black&quot;;
   <widget class="QLineEdit" name="username">
    <property name="geometry">
     <rect>
-     <x>260</x>
-     <y>260</y>
+     <x>265</x>
+     <y>290</y>
      <width>291</width>
      <height>41</height>
     </rect>
@@ -72,8 +72,8 @@ border-radius: 10px;
   <widget class="QLineEdit" name="password">
    <property name="geometry">
     <rect>
-     <x>260</x>
-     <y>360</y>
+     <x>265</x>
+     <y>380</y>
      <width>291</width>
      <height>41</height>
     </rect>
@@ -87,7 +87,7 @@ border-radius: 10px;</string>
    <property name="geometry">
     <rect>
      <x>230</x>
-     <y>240</y>
+     <y>260</y>
      <width>81</width>
      <height>16</height>
     </rect>
@@ -104,7 +104,7 @@ font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
    <property name="geometry">
     <rect>
      <x>230</x>
-     <y>340</y>
+     <y>355</y>
      <width>91</width>
      <height>16</height>
     </rect>
@@ -137,7 +137,7 @@ font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
    <property name="geometry">
     <rect>
      <x>440</x>
-     <y>500</y>
+     <y>505</y>
      <width>93</width>
      <height>28</height>
     </rect>
@@ -167,8 +167,8 @@ border-radius: 50px;</string>
    <widget class="QLabel" name="error">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>190</y>
+      <x>100</x>
+      <y>205</y>
       <width>241</width>
       <height>31</height>
      </rect>
@@ -186,7 +186,7 @@ text-align:center;</string>
     <property name="geometry">
      <rect>
       <x>160</x>
-      <y>230</y>
+      <y>240</y>
       <width>111</width>
       <height>41</height>
      </rect>

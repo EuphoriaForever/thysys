@@ -408,6 +408,7 @@ class Assessment(QDialog):
         chaidModel = cb.load_model(file_name="chaidModel.pkl")
         resultsPredict = cb.predict(chaidModel, values)
         print("The application predicts that you may be experiencing ", resultsPredict)
+        self.saveToDatabase(values, resultsPredict)
 
     def saveToDatabase(self, values, results):
         # saving to database
