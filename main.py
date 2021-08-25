@@ -407,24 +407,22 @@ class Assessment(QDialog):
     def goChaidResult(self, values):
         chaidModel = cb.load_model(file_name="chaidModel.pkl")
         resultsPredict = cb.predict(chaidModel, values)
-
         print("The application predicts that you may be experiencing ", resultsPredict)
-        print(uName)
+
+    def saveToDatabase(self, values, results):
         # saving to database
-        # conn = sqlite3.connect("thysys.db")
-        # c = conn.cursor()
-        # c.execute("INSERT INTO results(username, age, gender, pregnant, trimester, goitre, smoke, hairloss, "
-        #           "constipation, diarrhea, family, nervous, skin, menstrual, tired, sleepiness, weight, "
-        #           "heart, temp, class, created_at) "
-        #           "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,datetime('now','localtime'))", (
-        #               uName, age, gender, pregnant, trimester, goitre, smoke, hairloss, constipation, diarrhea, family,
-        #               nervous,
-        #               skin, menstrualBleeding, tired, sleepiness, weight, heart, temp, resultsPredict))
-        # conn.commit()
-        # conn.close()
-        # resultV = Result()
-        # widget.addWidget(resultV)
-        # widget.setCurrentIndex(widget.currentIndex() + 1)
+        conn = sqlite3.connect("thysys.db")
+        c = conn.cursor()
+        c.execute("INSERT INTO results(username, age, gender, pregnant, trimester, goitre, smoke, hairloss, "
+                  "constipation, diarrhea, family, nervous, skin, menstrual, tired, sleepiness, weight, "
+                  "heart, temp, class, created_at) "
+                  "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,datetime('now','localtime'))", (
+                      uName, values, results))
+        conn.commit()
+        conn.close()
+        resultV = Result()
+        widget.addWidget(resultV)
+        widget.setCurrentIndex(widget.currentIndex() + 1)
 
     def interpretClass(self, prediction):
         if prediction == 0:
