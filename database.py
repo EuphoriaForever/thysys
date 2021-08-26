@@ -56,7 +56,7 @@ c = conn.cursor()
 #         created_at text NOT NULL
 #     )""")
 
-c.execute("SELECT * FROM accounts")
+c.execute("SELECT * FROM results")
 print(c.fetchall())
 
 # c.execute("DROP TABLE results")

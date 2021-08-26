@@ -4,18 +4,19 @@ from typing import Union, Any
 
 from chefboost import Chefboost as cb
 from PyQt5 import QtWidgets, uic
-from PyQt5.QtWidgets import QDialog, QApplication
+from PyQt5.QtWidgets import QDialog, QApplication, QPushButton
 from PyQt5 import QtGui
 from PyQt5.QtGui import QDoubleValidator, QValidator
 from PyQt5.QtWidgets import QMessageBox
 from joblib import dump, load
 import sklearn
 import mlxtend
-#provides common algorithm like decision trees, neural networks, etc
+# provides common algorithm like decision trees, neural networks, etc
 from sklearn.svm import SVC, NuSVC
 from mlxtend.classifier import StackingClassifier, StackingCVClassifier
 
 uName = ""
+uResult = ""
 
 
 class Landing(QDialog):
@@ -71,10 +72,6 @@ class Login(QDialog):
                     self.error.setText('Invalid password')
             else:
                 self.error.setText("Invalid username")
-            # except Exception as e:
-            #     self.error.setText("Invalid username")
-            #     print('Exception: {}'.format(e))
-            #     raise Exception(e)
 
     def gotosignup(self):
         signupVar = Signup()
@@ -163,8 +160,10 @@ class Homepage(QDialog):
         msg.setWindowTitle("About THY-SYS")
         msg.setText("Hello and welcome to THY-SYS")
         msg.setIcon(QMessageBox.Information)
-        msg.setInformativeText("THY-SYS is an app that helps predict the likelihood of a person experiencing thyroid diseases based on their symptoms")
-        msg.setDetailedText("To predict what you may be experiencing, click the TAKE A SELF-ASSESSMENT button. To see results from previous assessment, click the RESULT button")
+        msg.setInformativeText(
+            "THY-SYS is an app that helps predict the likelihood of a person experiencing thyroid diseases based on their symptoms")
+        msg.setDetailedText(
+            "To predict what you may be experiencing, click the TAKE A SELF-ASSESSMENT button. To see results from previous assessment, click the RESULT button")
         x = msg.exec_()
 
 
@@ -173,7 +172,7 @@ class Assessment(QDialog):
         super(Assessment, self).__init__()
         uic.loadUi("thysys_assessmentPage.ui", self)
         self.Back.clicked.connect(self.gotoHome)
-        #Commented out for testing purposes
+        # Commented out for testing purposes
         # self.submitButton.clicked.connect(self.goResult)
         self.submitButton.clicked.connect(self.goRecodeResponse)
         print("Your name is ", uName)
@@ -183,7 +182,7 @@ class Assessment(QDialog):
         widget.addWidget(homepageVar)
         widget.setCurrentIndex(widget.currentIndex() + 1)
 
-    def gotoError(self,message):
+    def gotoError(self, message):
         msg = QMessageBox()
         msg.setIcon(QMessageBox.Critical)
         msg.setText("Error")
@@ -211,24 +210,30 @@ class Assessment(QDialog):
         heartRateChange = self.LowHeart.isChecked() or self.HighHeart.isChecked() or self.NormalHeight.isChecked()
         tempChange = self.LowTemp.isChecked() or self.NormalTemp.isChecked() or self.HighTemp.isChecked()
 
-        if isNotEmpty and isMF and isPregnant and whatTrimester and isBleeding and isSwelling and isSmoker and noHistory \
-        and isConst and isLoose and isSleep and isUneasy and isTired and isHairloss and weightChange and skinChange \
-        and heartRateChange and tempChange:
-            return True
+        if isNotEmpty and isMF and isSwelling and isSmoker and noHistory \
+                and isConst and isLoose and isSleep and isUneasy and isTired and isHairloss and weightChange and skinChange \
+                and heartRateChange and tempChange:
+            if self.FemalecheckBox.isChecked():  # since we confirmed nga nacheck ang gender, we check WHAT gender
+                if isPregnant and whatTrimester and isBleeding:
+                    return True
+                else:
+                    return False
+            else:  # if male, then they ommit the preg,tri and bleeding
+                return True
         else:
             return False
-         
-    def goRecodeResponse(self):
-        if self.checkAssessmentResponse(): #checks if the form is incomplete or empty
 
-            #Checks if the input in the textbox is a number from 1 to 150
-            validation_rule = QDoubleValidator(1,150,0)
-            if validation_rule.validate(self.ageInput.text(),1)[0] == QValidator.Acceptable:
+    def goRecodeResponse(self):
+        if self.checkAssessmentResponse():  # checks if the form is incomplete or empty
+
+            # Checks if the input in the textbox is a number from 1 to 150
+            validation_rule = QDoubleValidator(1, 150, 0)
+            if validation_rule.validate(self.ageInput.text(), 1)[0] == QValidator.Acceptable:
                 age = int(self.ageInput.text())
             else:
                 self.gotoError("Invalid Age")
 
-            #Checks to see if the examinee is Male or Female
+            # Checks to see if the examinee is Male or Female
             if self.MalecheckBox.isChecked():
                 gender_chaid = "M"
                 gender_stack = 0
@@ -236,13 +241,13 @@ class Assessment(QDialog):
                 gender_chaid = "F"
                 gender_stack = 1
 
-            #If Male, set prengancy, trimester, and menstrual bleeding to Not Applicable by default
+            # If Male, set prengancy, trimester, and menstrual bleeding to Not Applicable by default
             if gender_stack == 0:
                 pregnant_chaid = trimester_chaid = mens_chaid = "NaN"
                 pregnant_stack = mens_stack = 2
                 trimester_stack = 3
             else:
-                #Pregnancy
+                # Pregnancy
                 if self.YesPregnant.isChecked():
                     pregnant_chaid = "YES"
                     pregnant_stack = 1
@@ -250,7 +255,7 @@ class Assessment(QDialog):
                     pregnant_chaid = "NO"
                     pregnant_stack = 0
 
-                #Trimester
+                # Trimester
                 if self.FirstTri.isChecked():
                     trimester_chaid = "1ST"
                     trimester_stack = 0
@@ -264,16 +269,16 @@ class Assessment(QDialog):
                     trimester_chaid = "NaN"
                     trimester_stack = 3
 
-                #Menstrual Bleeding
+                # Menstrual Bleeding
                 if self.NormalMens.isChecked():
                     menstrualBleeding_chaid = "NORMAL"
                     menstrualBleeding_stack = 1
                 else:
                     menstrualBleeding_chaid = "ABNORMAL"
                     menstrualBleeding_stack = 0
-            
-            #Everything else that has nothing to do with se is recoded
-            #Goitre
+
+            # Everything else that has nothing to do with se is recoded
+            # Goitre
             if self.YesSwelling.isChecked():
                 goitre_chaid = "YES"
                 goitre_stack = 1
@@ -281,7 +286,7 @@ class Assessment(QDialog):
                 goitre_chaid = "NO"
                 goitre_stack = 0
 
-            #Smoker
+            # Smoker
             if self.YesSmoke.isChecked():
                 smoke_chaid = "YES"
                 smoke_stack = 1
@@ -289,7 +294,7 @@ class Assessment(QDialog):
                 smoke_chaid = "NO"
                 smoke_stack = 0
 
-            #Family History
+            # Family History
             if self.YesHistory.isChecked():
                 family_chaid = "YES"
                 family_stack = 1
@@ -297,7 +302,7 @@ class Assessment(QDialog):
                 family_chaid = "NO"
                 family_stack = 0
 
-            #Constipation
+            # Constipation
             if self.YesEmpty.isChecked():
                 constipation_chaid = "YES"
                 constipation_stack = 1
@@ -305,7 +310,7 @@ class Assessment(QDialog):
                 constipation_chaid = "NO"
                 constipation_stack = 0
 
-            #Diarrhoea
+            # Diarrhoea
             if self.YesLoose.isChecked():
                 diarrhea_chaid = "YES"
                 diarrhea_stack = 1
@@ -313,7 +318,7 @@ class Assessment(QDialog):
                 diarrhea_chaid = "NO"
                 diarrhea_stack = 0
 
-            #Sleepiness
+            # Sleepiness
             if self.LessSleep.isChecked():
                 sleepiness_chaid = "LESS"
                 sleepiness_stack = 0
@@ -324,7 +329,7 @@ class Assessment(QDialog):
                 sleepiness_chaid = "NORMAL"
                 sleepiness_stack = 1
 
-            #Nervousness
+            # Nervousness
             if self.YesUneasy.isChecked():
                 nervous_chaid = "YES"
                 nervous_stack = 1
@@ -332,7 +337,7 @@ class Assessment(QDialog):
                 nervous_chaid = "NO"
                 nervous_stack = 0
 
-            #Feeling Tired
+            # Feeling Tired
             if self.YesTired.isChecked():
                 tired_chaid = "YES"
                 tired_stack = 1
@@ -340,7 +345,7 @@ class Assessment(QDialog):
                 tired_chaid = "NO"
                 tired_stack = 0
 
-            #Hair loss
+            # Hair loss
             if self.YesHairLoss.isChecked():
                 hairloss_chaid = "YES"
                 hairloss_stack = 1
@@ -348,7 +353,7 @@ class Assessment(QDialog):
                 hairloss_chaid = "NO"
                 hairloss_stack = 0
 
-            #Weight
+            # Weight
             if self.GainWeight.isChecked():
                 weight_chaid = "GAIN"
                 weight_stack = 2
@@ -359,7 +364,7 @@ class Assessment(QDialog):
                 weight_chaid = "NORMAL"
                 weight_stack = 1
 
-            #Skin
+            # Skin
             if self.AbnormalSkin.isChecked():
                 skin_chaid = "ABNORMAL"
                 skin_stack = 0
@@ -367,7 +372,7 @@ class Assessment(QDialog):
                 skin_chaid = "NORMAL"
                 skin_stack = 1
 
-            #Heart Rate
+            # Heart Rate
             if self.LowHeart.isChecked():
                 heart_chaid = "LOW"
                 heart_stack = 0
@@ -378,7 +383,7 @@ class Assessment(QDialog):
                 heart_chaid = "NORMAL"
                 heart_stack = 1
 
-            #Body Temperature
+            # Body Temperature
             if self.LowTemp.isChecked():
                 temp_chaid = "LOW"
                 temp_stack = 0
@@ -388,20 +393,19 @@ class Assessment(QDialog):
             else:
                 temp_chaid = "NORMAL"
                 temp_stack = 1
-            
-            #Chaid and Stack Values
-            values_chaid = [age, gender_chaid, pregnant_chaid, trimester_chaid, goitre_chaid, smoke_chaid, 
+
+            # Chaid and Stack Values
+            values_chaid = [age, gender_chaid, pregnant_chaid, trimester_chaid, goitre_chaid, smoke_chaid,
                             hairloss_chaid, constipation_chaid, diarrhea_chaid, family_chaid, nervous_chaid,
-                            skin_chaid, mens_chaid, tired_chaid, sleepiness_chaid, weight_chaid, 
+                            skin_chaid, mens_chaid, tired_chaid, sleepiness_chaid, weight_chaid,
                             heart_chaid, temp_chaid]
-            values_stack = [age, gender_stack, pregnant_stack, trimester_stack, goitre_stack, smoke_stack, 
+            values_stack = [age, gender_stack, pregnant_stack, trimester_stack, goitre_stack, smoke_stack,
                             hairloss_stack, constipation_stack, diarrhea_stack, family_stack, nervous_stack,
-                            skin_stack, mens_stack, tired_stack, sleepiness_stack, weight_stack, 
+                            skin_stack, mens_stack, tired_stack, sleepiness_stack, weight_stack,
                             heart_stack, temp_stack]
             self.gotoStackResult(values_stack, values_chaid)
         else:
             self.gotoError("Incomplete Form.")
-        
 
     def saveToDatabase(self, values, results):
         # saving to database
@@ -411,7 +415,7 @@ class Assessment(QDialog):
                   "constipation, diarrhea, family, nervous, skin, menstrual, tired, sleepiness, weight, "
                   "heart, temp, class, created_at) "
                   "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,datetime('now','localtime'))", (
-                      uName, values[0], values[1], values[2], values[3], values[4], values[5], values[6],  
+                      uName, values[0], values[1], values[2], values[3], values[4], values[5], values[6],
                       values[7], values[8], values[9], values[10], values[11], values[12], values[13],
                       values[14], values[15], values[16], values[17], results))
         conn.commit()
@@ -428,14 +432,49 @@ class Assessment(QDialog):
         else:
             return "Hyperthyroidism"
 
-    def gotoStackResult(self,values_stack, values_chaid):
+    def gotoStackResult(self, values_stack, values_chaid):
         svm_knn = load('svm-knn-7.joblib')
         resultsPredict = svm_knn.predict([values_stack])
         resultsPredict = self.interpretClass(resultsPredict[0])
         print("The application predicts that you may be experiencing ", resultsPredict)
+        global uResult
+        uResult = resultsPredict
 
-        #Call method to save to database
+        # Call method to save to database
         self.saveToDatabase(values_chaid, resultsPredict)
+        # after saving, we go to the one time result page
+        self.goToOneTime()
+
+    def goToOneTime(self):
+        oneVar = OneTimeResult()
+        widget.addWidget(oneVar)
+        widget.setCurrentIndex(widget.currentIndex() + 1)
+
+
+class OneTimeResult(QDialog):
+    def __init__(self):
+        super(OneTimeResult, self).__init__()
+        uic.loadUi("thysys_one_result.ui", self)
+        self.Back.clicked.connect(self.backToHome)
+        self.myResults.clicked.connect(self.goToResultsList)
+        self.loadPage()
+
+    def backToHome(self):
+        homepageVar = Homepage()
+        widget.addWidget(homepageVar)
+        widget.setCurrentIndex(widget.currentIndex() + 1)
+
+    def loadPage(self):
+        global uResult
+        if uResult == 'Euthyroidism':
+            uResult = "  Normal Thyroid"
+
+        self.results.setText(uResult)
+
+    def goToResultsList(self):
+        resultVar = Result()
+        widget.addWidget(resultVar)
+        widget.setCurrentIndex(widget.currentIndex() + 1)
 
 
 class Result(QDialog):
@@ -449,30 +488,36 @@ class Result(QDialog):
         conn = sqlite3.connect("thysys.db")
         c = conn.cursor()
 
+        widgets = dict()
         self.tableWidget.setRowCount(0)
         rowCount = self.tableWidget.rowCount()
         tableIndex = 0
         for row in c.execute('SELECT * FROM results WHERE username = ?', (uName,)):
             self.tableWidget.setRowCount(rowCount + 1)
-            self.tableWidget.setItem(tableIndex, 0, QtWidgets.QTableWidgetItem(row[20]))
-            self.tableWidget.setItem(tableIndex, 1, QtWidgets.QTableWidgetItem(row[2]))
-            self.tableWidget.setItem(tableIndex, 2, QtWidgets.QTableWidgetItem(row[3]))
-            self.tableWidget.setItem(tableIndex, 3, QtWidgets.QTableWidgetItem(row[4]))
-            self.tableWidget.setItem(tableIndex, 4, QtWidgets.QTableWidgetItem(row[5]))
-            self.tableWidget.setItem(tableIndex, 5, QtWidgets.QTableWidgetItem(row[14]))
-            self.tableWidget.setItem(tableIndex, 6, QtWidgets.QTableWidgetItem(row[6]))
-            self.tableWidget.setItem(tableIndex, 7, QtWidgets.QTableWidgetItem(row[7]))
-            self.tableWidget.setItem(tableIndex, 8, QtWidgets.QTableWidgetItem(row[11]))
-            self.tableWidget.setItem(tableIndex, 9, QtWidgets.QTableWidgetItem(row[9]))
-            self.tableWidget.setItem(tableIndex, 10, QtWidgets.QTableWidgetItem(row[10]))
-            self.tableWidget.setItem(tableIndex, 11, QtWidgets.QTableWidgetItem(row[16]))
-            self.tableWidget.setItem(tableIndex, 12, QtWidgets.QTableWidgetItem(row[12]))
-            self.tableWidget.setItem(tableIndex, 13, QtWidgets.QTableWidgetItem(row[15]))
-            self.tableWidget.setItem(tableIndex, 14, QtWidgets.QTableWidgetItem(row[8]))
-            self.tableWidget.setItem(tableIndex, 15, QtWidgets.QTableWidgetItem(row[17]))
-            self.tableWidget.setItem(tableIndex, 16, QtWidgets.QTableWidgetItem(row[13]))
-            self.tableWidget.setItem(tableIndex, 17, QtWidgets.QTableWidgetItem(row[18]))
-            self.tableWidget.setItem(tableIndex, 18, QtWidgets.QTableWidgetItem(row[19]))
+            self.tableWidget.setItem(tableIndex, 0, QtWidgets.QTableWidgetItem(row[21]))
+            self.tableWidget.setItem(tableIndex, 1, QtWidgets.QTableWidgetItem(row[20]))
+            name = row[0]
+            widgets[name] = QPushButton("See Details")
+            widgets[name].clicked.connect(lambda: self.loadIndividResults(name))
+
+            # self.tableWidget.setItem(tableIndex, 1, QtWidgets.QTableWidgetItem(row[2]))
+            # self.tableWidget.setItem(tableIndex, 2, QtWidgets.QTableWidgetItem(row[3]))
+            # self.tableWidget.setItem(tableIndex, 3, QtWidgets.QTableWidgetItem(row[4]))
+            # self.tableWidget.setItem(tableIndex, 4, QtWidgets.QTableWidgetItem(row[5]))
+            # self.tableWidget.setItem(tableIndex, 5, QtWidgets.QTableWidgetItem(row[14]))
+            # self.tableWidget.setItem(tableIndex, 6, QtWidgets.QTableWidgetItem(row[6]))
+            # self.tableWidget.setItem(tableIndex, 7, QtWidgets.QTableWidgetItem(row[7]))
+            # self.tableWidget.setItem(tableIndex, 8, QtWidgets.QTableWidgetItem(row[11]))
+            # self.tableWidget.setItem(tableIndex, 9, QtWidgets.QTableWidgetItem(row[9]))
+            # self.tableWidget.setItem(tableIndex, 10, QtWidgets.QTableWidgetItem(row[10]))
+            # self.tableWidget.setItem(tableIndex, 11, QtWidgets.QTableWidgetItem(row[16]))
+            # self.tableWidget.setItem(tableIndex, 12, QtWidgets.QTableWidgetItem(row[12]))
+            # self.tableWidget.setItem(tableIndex, 13, QtWidgets.QTableWidgetItem(row[15]))
+            # self.tableWidget.setItem(tableIndex, 14, QtWidgets.QTableWidgetItem(row[8]))
+            # self.tableWidget.setItem(tableIndex, 15, QtWidgets.QTableWidgetItem(row[17]))
+            # self.tableWidget.setItem(tableIndex, 16, QtWidgets.QTableWidgetItem(row[13]))
+            # self.tableWidget.setItem(tableIndex, 17, QtWidgets.QTableWidgetItem(row[18]))
+            # self.tableWidget.setItem(tableIndex, 18, QtWidgets.QTableWidgetItem(row[19]))
             print(row)
             tableIndex += 1
             rowCount += 1
@@ -481,6 +526,9 @@ class Result(QDialog):
         homepageVar = Homepage()
         widget.addWidget(homepageVar)
         widget.setCurrentIndex(widget.currentIndex() + 1)
+
+    def loadIndividResults(self,name):
+        print("pota")
 
 
 app = QApplication(sys.argv)
