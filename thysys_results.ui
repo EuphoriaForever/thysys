@@ -71,137 +71,6 @@ font: 87 14pt &quot;Arial Black&quot;;
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QTableWidget" name="tableWidget">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>150</y>
-     <width>801</width>
-     <height>401</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>arial</family>
-     <pointsize>12</pointsize>
-     <weight>75</weight>
-     <italic>false</italic>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(135, 135, 135);
-font-family: arial;
-font-weight: bold;</string>
-   </property>
-   <property name="frameShape">
-    <enum>QFrame::NoFrame</enum>
-   </property>
-   <property name="frameShadow">
-    <enum>QFrame::Raised</enum>
-   </property>
-   <property name="editTriggers">
-    <set>QAbstractItemView::NoEditTriggers</set>
-   </property>
-   <property name="gridStyle">
-    <enum>Qt::DotLine</enum>
-   </property>
-   <column>
-    <property name="text">
-     <string>Prediction</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Age</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Gender</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Pregnant</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Trimester</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Menstrual Cycle</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Goitre</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Smoking</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Family History</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Constipation</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Diarrhea</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Amount of Sleep</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Nervousness</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Tiredness</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Hairloss</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Weight</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Skin</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Heart Rate</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Temperature</string>
-    </property>
-   </column>
-  </widget>
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
@@ -218,6 +87,99 @@ font-weight: bold;</string>
     <string>© Icon from flaticon.com</string>
    </property>
   </widget>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>140</y>
+     <width>511</width>
+     <height>431</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 4px solid rgb(170, 85, 255);
+border-radius: 50px;</string>
+   </property>
+   <widget class="QLabel" name="error">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>205</y>
+      <width>241</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: rgb(0, 0, 0);
+color: rgb(255, 0, 0);
+text-align:center;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="tableWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>30</y>
+      <width>481</width>
+      <height>371</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>arial</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(135, 135, 135);
+font-family: arial;
+font-weight: bold;
+border:white;</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <property name="sizeAdjustPolicy">
+     <enum>QAbstractScrollArea::AdjustToContents</enum>
+    </property>
+    <property name="editTriggers">
+     <set>QAbstractItemView::NoEditTriggers</set>
+    </property>
+    <property name="gridStyle">
+     <enum>Qt::DotLine</enum>
+    </property>
+    <attribute name="horizontalHeaderCascadingSectionResizes">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="horizontalHeaderMinimumSectionSize">
+     <number>51</number>
+    </attribute>
+    <column>
+     <property name="text">
+      <string>Date</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Prediction</string>
+     </property>
+    </column>
+   </widget>
+  </widget>
+  <zorder>widget</zorder>
+  <zorder>Back</zorder>
+  <zorder>thysysName</zorder>
+  <zorder>icon</zorder>
+  <zorder>label_3</zorder>
  </widget>
  <resources/>
  <connections/>

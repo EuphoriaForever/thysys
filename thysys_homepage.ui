@@ -20,7 +20,7 @@
    <property name="geometry">
     <rect>
      <x>310</x>
-     <y>350</y>
+     <y>360</y>
      <width>211</width>
      <height>61</height>
     </rect>
@@ -58,7 +58,7 @@ border-radius: 15px;</string>
    <property name="geometry">
     <rect>
      <x>310</x>
-     <y>260</y>
+     <y>265</y>
      <width>211</width>
      <height>61</height>
     </rect>
@@ -95,7 +95,7 @@ font: 87 18pt &quot;Arial Black&quot;;
    <property name="geometry">
     <rect>
      <x>310</x>
-     <y>450</y>
+     <y>455</y>
      <width>211</width>
      <height>61</height>
     </rect>
