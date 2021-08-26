@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>802</width>
-    <height>600</height>
+    <width>801</width>
+    <height>599</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -32,24 +32,6 @@ border-radius:20px;</string>
    </property>
    <property name="text">
     <string>Back</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="thysysName">
-   <property name="geometry">
-    <rect>
-     <x>350</x>
-     <y>100</y>
-     <width>111</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(255, 85, 127);
-font: 87 14pt &quot;Arial Black&quot;;
-</string>
-   </property>
-   <property name="text">
-    <string>THY-SYS</string>
    </property>
   </widget>
   <widget class="QLabel" name="icon">
@@ -85,6 +67,24 @@ font: 87 14pt &quot;Arial Black&quot;;
    </property>
    <property name="text">
     <string>© Icon from flaticon.com</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="thysysName">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>100</y>
+     <width>111</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 85, 127);
+font: 87 14pt &quot;Arial Black&quot;;
+</string>
+   </property>
+   <property name="text">
+    <string>THY-SYS</string>
    </property>
   </widget>
   <widget class="QWidget" name="widget" native="true">
@@ -163,28 +163,35 @@ border:white;</string>
     <attribute name="horizontalHeaderMinimumSectionSize">
      <number>51</number>
     </attribute>
-    <column>
+    <row>
      <property name="text">
-      <string>Date</string>
+      <string>New Row</string>
      </property>
-    </column>
-    <column>
+    </row>
+    <row>
      <property name="text">
-      <string>Prediction</string>
+      <string>Age</string>
      </property>
-    </column>
+    </row>
+    <row>
+     <property name="text">
+      <string>Pregnant</string>
+     </property>
+    </row>
     <column>
      <property name="text">
-      <string/>
+      <string>Factors</string>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
      </property>
     </column>
    </widget>
   </widget>
-  <zorder>widget</zorder>
-  <zorder>Back</zorder>
-  <zorder>thysysName</zorder>
-  <zorder>icon</zorder>
-  <zorder>label_3</zorder>
  </widget>
  <resources/>
  <connections/>

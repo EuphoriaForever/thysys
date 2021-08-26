@@ -17,6 +17,7 @@ from mlxtend.classifier import StackingClassifier, StackingCVClassifier
 
 uName = ""
 uResult = ""
+uResultID = {}
 
 
 class Landing(QDialog):
@@ -463,6 +464,8 @@ class OneTimeResult(QDialog):
         homepageVar = Homepage()
         widget.addWidget(homepageVar)
         widget.setCurrentIndex(widget.currentIndex() + 1)
+        global uResult
+        uResult = ""
 
     def loadPage(self):
         global uResult
@@ -475,6 +478,8 @@ class OneTimeResult(QDialog):
         resultVar = Result()
         widget.addWidget(resultVar)
         widget.setCurrentIndex(widget.currentIndex() + 1)
+        global uResult
+        uResult = ""
 
 
 class Result(QDialog):
@@ -485,6 +490,7 @@ class Result(QDialog):
         self.loadData()
 
     def loadData(self):
+        global uResultID
         conn = sqlite3.connect("thysys.db")
         c = conn.cursor()
 
@@ -496,39 +502,23 @@ class Result(QDialog):
             self.tableWidget.setRowCount(rowCount + 1)
             self.tableWidget.setItem(tableIndex, 0, QtWidgets.QTableWidgetItem(row[21]))
             self.tableWidget.setItem(tableIndex, 1, QtWidgets.QTableWidgetItem(row[20]))
-            name = row[0]
-            widgets[name] = QPushButton("See Details")
-            widgets[name].clicked.connect(lambda: self.loadIndividResults(name))
-
-            # self.tableWidget.setItem(tableIndex, 1, QtWidgets.QTableWidgetItem(row[2]))
-            # self.tableWidget.setItem(tableIndex, 2, QtWidgets.QTableWidgetItem(row[3]))
-            # self.tableWidget.setItem(tableIndex, 3, QtWidgets.QTableWidgetItem(row[4]))
-            # self.tableWidget.setItem(tableIndex, 4, QtWidgets.QTableWidgetItem(row[5]))
-            # self.tableWidget.setItem(tableIndex, 5, QtWidgets.QTableWidgetItem(row[14]))
-            # self.tableWidget.setItem(tableIndex, 6, QtWidgets.QTableWidgetItem(row[6]))
-            # self.tableWidget.setItem(tableIndex, 7, QtWidgets.QTableWidgetItem(row[7]))
-            # self.tableWidget.setItem(tableIndex, 8, QtWidgets.QTableWidgetItem(row[11]))
-            # self.tableWidget.setItem(tableIndex, 9, QtWidgets.QTableWidgetItem(row[9]))
-            # self.tableWidget.setItem(tableIndex, 10, QtWidgets.QTableWidgetItem(row[10]))
-            # self.tableWidget.setItem(tableIndex, 11, QtWidgets.QTableWidgetItem(row[16]))
-            # self.tableWidget.setItem(tableIndex, 12, QtWidgets.QTableWidgetItem(row[12]))
-            # self.tableWidget.setItem(tableIndex, 13, QtWidgets.QTableWidgetItem(row[15]))
-            # self.tableWidget.setItem(tableIndex, 14, QtWidgets.QTableWidgetItem(row[8]))
-            # self.tableWidget.setItem(tableIndex, 15, QtWidgets.QTableWidgetItem(row[17]))
-            # self.tableWidget.setItem(tableIndex, 16, QtWidgets.QTableWidgetItem(row[13]))
-            # self.tableWidget.setItem(tableIndex, 17, QtWidgets.QTableWidgetItem(row[18]))
-            # self.tableWidget.setItem(tableIndex, 18, QtWidgets.QTableWidgetItem(row[19]))
+            uResultID[tableIndex] = row[0]
+            buttoning = QPushButton('View Details', self)
+            buttoning.clicked.connect(lambda: goToDetails(tableIndex))
+            self.tableWidget.setCellWidget(tableIndex, 2, buttoning)
             print(row)
             tableIndex += 1
             rowCount += 1
+        print(uResultID)
 
     def goHome(self):
         homepageVar = Homepage()
         widget.addWidget(homepageVar)
         widget.setCurrentIndex(widget.currentIndex() + 1)
 
-    def loadIndividResults(self,name):
-        print("pota")
+
+def goToDetails(numVar):
+    print('aye ', numVar)
 
 
 app = QApplication(sys.argv)
