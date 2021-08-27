@@ -1,0 +1,20 @@
+Date:2021-08-27 10:52:02
+Prediction:Hypothyroidism
+Age:22
+Gender:F
+Pregnant:NO
+Trimester:NaN
+Menstrual Cycle:ABNORMAL
+Goitre:YES
+Smoking:NO
+History of thyroid disease in the family:NO
+Constipation:YES
+Diarrhea:YES
+Tired:NO
+Nervous:NO
+Sleep:NORMAL
+Hairloss:YES
+Skin:ABNORMAL
+Weight:LOSS
+Heart Rate:HIGH
+Temperature:NORMAL
