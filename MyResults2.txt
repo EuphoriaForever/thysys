@@ -5,4 +5,13 @@ Gender:M
 Goitre:NO
 Smoking:NO
 History of thyroid disease in the family:NO
-Constipation:
+Constipation:NO
+Diarrhea:YES
+Tired:YES
+Nervous:NO
+Sleep:LESS
+Hairloss:NO
+Skin:NORMAL
+Weight:LOSS
+Heart Rate:HIGH
+Temperature:HIGH

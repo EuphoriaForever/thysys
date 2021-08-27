@@ -571,7 +571,15 @@ class Details(QDialog):
             if row[3] == 'M':
                 uText = ["Date:", row[21], "\nPrediction:", row[20], "\nAge:", row[2], "\nGender:", row[3], "\nGoitre:",
                          row[6], "\nSmoking:", row[7], "\nHistory of thyroid disease in the family:", row[11],
-                         "\nConstipation:"]
+                         "\nConstipation:", row[9], "\nDiarrhea:", row[10], "\nTired:", row[15], "\nNervous:", row[12],
+                         "\nSleep:", row[16], "\nHairloss:", row[8], "\nSkin:", row[13], "\nWeight:", row[17],
+                         "\nHeart Rate:", row[18], "\nTemperature:", row[19]]
+            else:
+                uText = ["Date:", row[21], "\nPrediction:", row[20], "\nAge:", row[2], "\nGender:", row[3],
+                         "\nPregnant:", row[4], "\nTrimester:", row[5], "\nMenstrual Cycle:", row[14], "\nGoitre:", row[6], "\nSmoking:",
+                         row[7], "\nHistory of thyroid disease in the family:", row[11],"\nConstipation:", row[9], "\nDiarrhea:",
+                         row[10], "\nTired:", row[15], "\nNervous:", row[12], "\nSleep:", row[16], "\nHairloss:", row[8],
+                         "\nSkin:", row[13], "\nWeight:", row[17], "\nHeart Rate:", row[18], "\nTemperature:", row[19]]
 
     def goBackToResults(self):
         resultVar = Result()
