@@ -36,9 +36,9 @@ c = conn.cursor()
 #         username text NOT NULL, [1]
 #         age text NOT NULL,[2]
 #         gender text NOT NULL,
-#         pregnant text NOT NULL,
+#         pregnant text NOT NULL,[4]
 #         trimester text NOT NULL,
-#         goitre text NOT NULL,
+#         goitre text NOT NULL,[6]
 #         smoke text NOT NULL,
 #         hairloss text NOT NULL, [8]
 #         constipation text NOT NULL,

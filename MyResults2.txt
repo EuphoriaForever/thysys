@@ -1,0 +1,8 @@
+Date:2021-08-25 23:24:46
+Prediction:Hyperthyroidism
+Age:21
+Gender:M
+Goitre:NO
+Smoking:NO
+History of thyroid disease in the family:NO
+Constipation:

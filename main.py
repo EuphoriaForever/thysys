@@ -18,6 +18,8 @@ from mlxtend.classifier import StackingClassifier, StackingCVClassifier
 uName = ""
 uResult = ""
 uResultID = {}
+uDetail = ""
+uText = ""
 
 
 class Landing(QDialog):
@@ -142,6 +144,8 @@ class Homepage(QDialog):
     def gotoLanding(self):
         global uName
         uName = ""
+        global uResultID
+        uResultID = {}
         landingVar = Landing()
         widget.addWidget(landingVar)
         widget.setCurrentIndex(widget.currentIndex() + 1)
@@ -214,13 +218,13 @@ class Assessment(QDialog):
         if isNotEmpty and isMF and isSwelling and isSmoker and noHistory \
                 and isConst and isLoose and isSleep and isUneasy and isTired and isHairloss and weightChange and skinChange \
                 and heartRateChange and tempChange:
-            if self.FemalecheckBox.isChecked():  # since we confirmed nga nacheck ang gender, we check WHAT gender
+            if self.MalecheckBox.isChecked():  # since we confirmed nga nacheck ang gender, we check WHAT gender
+                return True
+            elif self.FemalecheckBox.isChecked():
                 if isPregnant and whatTrimester and isBleeding:
                     return True
                 else:
                     return False
-            else:  # if male, then they ommit the preg,tri and bleeding
-                return True
         else:
             return False
 
@@ -272,11 +276,11 @@ class Assessment(QDialog):
 
                 # Menstrual Bleeding
                 if self.NormalMens.isChecked():
-                    menstrualBleeding_chaid = "NORMAL"
-                    menstrualBleeding_stack = 1
+                    mens_chaid = "NORMAL"
+                    mens_stack = 1
                 else:
-                    menstrualBleeding_chaid = "ABNORMAL"
-                    menstrualBleeding_stack = 0
+                    mens_chaid = "ABNORMAL"
+                    mens_stack = 0
 
             # Everything else that has nothing to do with se is recoded
             # Goitre
@@ -494,7 +498,6 @@ class Result(QDialog):
         conn = sqlite3.connect("thysys.db")
         c = conn.cursor()
 
-        widgets = dict()
         self.tableWidget.setRowCount(0)
         rowCount = self.tableWidget.rowCount()
         tableIndex = 0
@@ -504,7 +507,7 @@ class Result(QDialog):
             self.tableWidget.setItem(tableIndex, 1, QtWidgets.QTableWidgetItem(row[20]))
             uResultID[tableIndex] = row[0]
             buttoning = QPushButton('View Details', self)
-            buttoning.clicked.connect(lambda: goToDetails(tableIndex))
+            buttoning.clicked.connect(lambda ch, i=uResultID[tableIndex]: self.goToDetails(i))
             self.tableWidget.setCellWidget(tableIndex, 2, buttoning)
             print(row)
             tableIndex += 1
@@ -515,10 +518,82 @@ class Result(QDialog):
         homepageVar = Homepage()
         widget.addWidget(homepageVar)
         widget.setCurrentIndex(widget.currentIndex() + 1)
+        global uResultID
+        uResultID = {}
+
+    def goToDetails(self, numVar):
+        print('aye ', numVar)
+        global uDetail
+        uDetail = numVar
+        detailVar = Details()
+        widget.addWidget(detailVar)
+        widget.setCurrentIndex(widget.currentIndex() + 1)
 
 
-def goToDetails(numVar):
-    print('aye ', numVar)
+class Details(QDialog):
+    def __init__(self):
+        super(Details, self).__init__()
+        uic.loadUi("thysys_details.ui", self)
+        self.Back.clicked.connect(self.goBackToResults)
+        self.Home.clicked.connect(self.goBackHome)
+        self.SaveTextFile.clicked.connect(self.SaveText)
+        self.loadTheData()
+
+    def loadTheData(self):
+        global uText
+        conn = sqlite3.connect("thysys.db")
+        c = conn.cursor()
+        for row in c.execute('SELECT * FROM results WHERE result_id = ?', (uDetail,)):
+            self.Predict.setText(row[20])
+            self.Age.setText(row[2])
+            self.Gender.setText(row[3])
+            if row[3] == 'F':
+                self.PregnantLabel.setText('Pregnant:')
+                self.Pregnant.setText(row[4])
+                self.TrimesterLabel.setText('Trimester:')
+                self.Trimester.setText(row[5])
+                self.MenstrualLabel.setText('Menstrual Cycle:')
+                self.Menstrual.setText(row[14])
+            self.Goitre.setText(row[6])
+            self.Smoking.setText(row[7])
+            self.Family.setText(row[11])
+            self.Constipation.setText(row[9])
+            self.Diarrhea.setText(row[10])
+            self.Tired.setText(row[15])
+            self.Nervous.setText(row[12])
+            self.Sleep.setText(row[16])
+            self.Hairloss.setText(row[8])
+            self.Skin.setText(row[13])
+            self.Weight.setText(row[17])
+            self.HeartRate.setText(row[18])
+            self.Temperature.setText(row[19])
+
+            if row[3] == 'M':
+                uText = ["Date:", row[21], "\nPrediction:", row[20], "\nAge:", row[2], "\nGender:", row[3], "\nGoitre:",
+                         row[6], "\nSmoking:", row[7], "\nHistory of thyroid disease in the family:", row[11],
+                         "\nConstipation:"]
+
+    def goBackToResults(self):
+        resultVar = Result()
+        widget.addWidget(resultVar)
+        widget.setCurrentIndex(widget.currentIndex() + 1)
+        global uDetail
+        uDetail = ""
+
+    def goBackHome(self):
+        homepageVar = Homepage()
+        widget.addWidget(homepageVar)
+        widget.setCurrentIndex(widget.currentIndex() + 1)
+        global uDetail
+        uDetail = ""
+
+    def SaveText(self):
+        global uDetail
+        uDetail = 'MyResults'+str(uDetail)
+        filename = "%s.txt" % uDetail
+        file1 = open(filename, "w")
+        file1.writelines(uText)
+        file1.close()  # to change file access modes
 
 
 app = QApplication(sys.argv)
